@@ -1,2 +1,3 @@
-#Banner, #Search, #Footer { width: flex; }
-#Content { width: 100%; }
+#Banner, #Footer { width: flex; }
+#Search { width: max-width; }
+#Content { width: max-width; }
