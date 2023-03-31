@@ -1,1 +1,2 @@
-#Banner, #Search, #Content, #Footer { width: flex; }
+#Banner, #Search, #Footer { width: flex; }
+#Content { width: 100%; }
