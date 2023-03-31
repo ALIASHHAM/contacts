@@ -1,5 +1,7 @@
-#Banner, #Search, #Content, #Footer { width: 100%; }
+#Banner,
 /* styles for desktops */
 @media only screen and (min-width:901px) 
   /* styles for smartphones */
 @media only screen and (min-width:600px) 
+#Search, #Content, #Footer { width: 100%; }
+
