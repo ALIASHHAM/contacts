@@ -154,6 +154,21 @@ Body	{
 	font: 0.2em candara;
 	}
 
+/* Default styles for all screen sizes */
+body {
+	 font-size:16px;
+}
+
+.container {
+	 width:80%;
+	 margin: 0 auto;
+}
+
+.image {
+       width:100%;
+	height: auto;
+}
+
 /*styles for screens smaller 768px (i.e smartphone)
 media only screen and (max-width:767px){
 Body {
