@@ -25,7 +25,7 @@ Body	{
 	}
 
 #Search	{
-	margin: 10;
+	margin: flex;
 	padding: 15px;
 	background: rgb(33,190,222);
 	text-align: center;
