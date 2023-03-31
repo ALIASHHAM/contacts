@@ -155,28 +155,22 @@ Body	{
 	}
 
 /* Default styles for all screen sizes */
-body {
-	 font-size:16px;
-}
-
 .container {
-	 width:80%;
+	 width:960PX;
 	 margin: 0 auto;
 }
 
 .image {
-       width:100%;
+	width:100%;
 	height: auto;
 }
 
 /*styles for screens smaller 768px (i.e smartphone)
-media only screen and (max-width:767px){
-Body {
- font-size:14px;
- }
+@media only screen and (max-width:767px) {
  .container {
 	width: 90%;
  }
+
  .image {
  width: 100%;
  height: auto;
