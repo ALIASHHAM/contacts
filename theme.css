@@ -17,7 +17,7 @@ Body	{
 
 #Banner	{
 	margin: 0;
-	padding: 2px;
+	padding: flex;
 	color: #FFF;
 	font: 0.8em Cambria;
 	background: rgb(255,255,255);
@@ -36,7 +36,7 @@ Body	{
 	}
 
 #Text	{
-	width: 800px;
+	width: flex;
 	color: rgb(10,10,10);
 	font: 4em Cambria;
 	}
