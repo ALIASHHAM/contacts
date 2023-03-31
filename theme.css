@@ -17,7 +17,7 @@ Body	{
 
 #Banner	{
 	margin: 0;
-	padding: flex;
+	padding: 2px;
 	color: #FFF;
 	font: 0.8em Cambria;
 	background: rgb(255,255,255);
@@ -25,12 +25,12 @@ Body	{
 	}
 
 #Search	{
-	margin: flex;
-	padding: flex;
+	margin: 10;
+	padding: 15px;
 	background: rgb(33,190,222);
 	text-align: center;
-	border-top: flex; solid rgb(255,255,255);
-	border-bottom: flex; solid rgb(255,255,255);
+	border-top: 10px solid rgb(255,255,255);
+	border-bottom: 10px solid rgb(255,255,255);
 	border-left: 0px solid rgb(33,190,222);
 	border-right: 0px solid rgb(33,190,222);
 	}
@@ -53,7 +53,7 @@ Body	{
 	margin: 0;
 	padding: 0;
 	border: 0;
-	width: flex;
+	width: 100%;
 	}
 
 #Name	{
