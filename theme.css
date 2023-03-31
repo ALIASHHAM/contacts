@@ -29,8 +29,8 @@ Body	{
 	padding: flex;
 	background: rgb(33,190,222);
 	text-align: center;
-	border-top: flex solid rgb(255,255,255);
-	border-bottom: flex solid rgb(255,255,255);
+	border-top: flex; solid rgb(255,255,255);
+	border-bottom: flex; solid rgb(255,255,255);
 	border-left: 0px solid rgb(33,190,222);
 	border-right: 0px solid rgb(33,190,222);
 	}
