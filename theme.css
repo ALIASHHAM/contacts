@@ -1,3 +1,6 @@
+/* styles for desktops */
+@media only screen and (min-width: 901px) {
+
 Body	{
 	margin: 0 10%;
 	padding: 10;
