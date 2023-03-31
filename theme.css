@@ -1,0 +1,155 @@
+Body	{
+	margin: 0 10%;
+	padding: 10;
+	text-align: center;
+	background: rgb(255,255,255);
+	}
+
+#Main	{
+	margin: 0;
+	padding: 0;
+	border: 0px solid #FC;
+	}
+
+#Beta	{
+	font: 0.3em Cambria;
+	}
+
+#Banner	{
+	margin: 0;
+	padding: 2px;
+	color: #FFF;
+	font: 0.8em Cambria;
+	background: rgb(255,255,255);
+	border: 5px square rgb(218,218,218);
+	}
+
+#Search	{
+	margin: 10;
+	padding: 15px;
+	background: rgb(33,190,222);
+	text-align: center;
+	border-top: 10px solid rgb(255,255,255);
+	border-bottom: 10px solid rgb(255,255,255);
+	border-left: 0px solid rgb(33,190,222);
+	border-right: 0px solid rgb(33,190,222);
+	}
+
+#Text	{
+	width: 800px;
+	color: rgb(10,10,10);
+	font: 4em Cambria;
+	}
+
+#Content{
+	margin: 0;
+	padding: 0;
+	background: rgb(33,190,222);
+	border: 0px solid rgb(0,0,0);
+	align: center;
+	}
+
+#Table	{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 100%;
+	}
+
+#Name	{
+	margin: 0;
+	padding: 10px;
+	color: #FF0000;
+	width: 300px;
+	font: bold 1.3em Lucida Bright;
+	background: rgb(33,190,222);
+	text-align: center;
+	border: 0px solid #BBB;
+	border-width: 0px 0px 0px 0px; 
+	}
+
+#Code	{
+	margin: 0;
+	padding: 10px;
+	color: #FF0000;
+	width: 200px;
+	font: bold 1.3em Lucida Bright;
+	text-align: center;
+	background: rgb(33,190,222);
+	border: 0px solid #BBB;
+	border-width: 0px 0px 0px 0px; 
+	}
+
+#Island	{
+	margin: 0;
+	padding: 10px;
+	color: #FF0000;
+	width: 100px;
+	font: bold 1.3em Lucida Bright;
+	text-align: center;
+	background: rgb(33,190,222);
+	border: 0px solid #BBB;
+	border-width: 0px 0px 0px 0px; 
+	}
+
+#Names	{
+	margin: 0;
+	padding: 5px;
+	color: #8;
+	width: 400px;
+	font: bold 1.1em Cambria;
+	text-align: center;
+	background: rgb(220,240,247);
+	border: rgb(220,240,247);
+	border-width: 5px 5px 5px 5px; 
+	}
+
+#Codes	{
+	margin: 0;
+	padding: 10px;
+	color: #1;
+	width: 320px;
+	font: bold 1.1em Cambria;
+	text-align: center;
+	background: rgb(220,240,247);
+	border: rgb(220,240,247);
+	border-width: 5px 5px 5px 5px;
+	}
+
+#Islands	{
+	margin: 0;
+	padding: 10px;
+	color: #1;
+	width: 200px;
+	font: bold 1.1em Cambria;
+	text-align: center;
+	background: rgb(220,240,247);
+	border: rgb(220,240,247);
+	border-width: 5px 5px 5px 5px;
+	}
+
+#NA	{
+	margin: 5px;
+	padding: 5px;
+	color: #FF0000;
+	font: bold 3em Brush Script MT;
+	background: rgb(255, 255, 0);
+	border: 1px solid #CCC;
+	border-width: 0px 0px 0px 0px; 
+	}
+
+#Footer	{
+	margin: 0;
+	padding: 10px;
+	color: #FF0000;
+	font: 0.8em Cambria;
+	letter-spacing: 1.5px;
+	background: rgb(255,255,255);
+	border: 0px solid rgb(0,0,0);
+	border-top: 0;
+	}
+#XNA	{
+	border: 1px rgb solid(150,150,200);
+	background: rgb(255,255,255);
+	font: 0.2em candara;
+	}
