@@ -153,3 +153,17 @@ Body	{
 	background: rgb(255,255,255);
 	font: 0.2em candara;
 	}
+
+/*styles for screens smaller 768px (i.e smartphone)
+media only screen and (max-width:767px){
+Body {
+ font-size:14px;
+ }
+ .container {
+	width: 90%;
+ }
+ .image {
+ width: 100%;
+ height: auto;
+ }
+}
