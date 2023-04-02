@@ -165,7 +165,7 @@ Body	{
 	height: auto;
 }
 
-/*styles for screens smaller 768px (i.e smartphone)
+{ /*styles for screens smaller 768px (i.e smartphone)
 @media only screen and (max-width:767px) {
  .container {
 	width: 90%;
