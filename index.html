@@ -1,118 +1,323 @@
+<!DOCTYPE html>
 <html>
 
-	<head>
- 
-	<title> - Airport Contact Numbers -  </title>
-	
-	<link rel="shortcut icon" href="favicon.ico" />
+<head>
+    <title>Airport Contact Numbers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta property="og:image" content="via2.jpg">
+    <meta property="og:image:alt" content="Airport Contacts">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="hacks.css">
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-image: url("Male.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
 
-	<script type="text/javascript" src="include2.js"></script>
+        #main {
+            margin-top: 33vh;
+            flex-grow: 1;
+            margin: 0;
+            padding: 0;
+            border: 0px solid #FC;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-	<script type="text/javascript">
+        #banner {
+            padding: 0;
+            color: #FFF;
+            font: 0.8em Cambria;
+            background: url("new.jpg") no-repeat center center / cover;
+            border: 1px solid rgb(218, 218, 218);
+            box-sizing: border-box;
+            width: 100%;
+            height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: -150px;
+        }
 
-		with ( document ) {
+        #search {
+            margin: 20px auto;
+            text-align: center;
+            width: 100%;
+        }
 
-			if ( navigator.appName.indexOf("Microsoft") != -1 ) {
+        #text {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            color: rgb(10, 10, 10);
+            font: 2em Cambria;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
 
-				write('<link rel="stylesheet" type="text/css" href="hacks.css">');
+        #content {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            width: 100%;
+            box-sizing: border-box;
+            overflow-x: auto;
+        }
 
-			}
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            table-layout: fixed;
+            width: 100%;
+            max-width: 100%;
+        }
 
-			write('<link rel="stylesheet" type="text/css" href="theme.css">');
+        th {
+            background-color: #333;
+            color: #FFF;
+            padding: 10px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: auto;
+            max-width: 100%;
+        }
 
-		}
+        td {
+            padding: 10px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: auto;
+            max-width: 100%;
+        }
 
-	</script>
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
 
-	<style type="text/css">
-<!--
-#apDiv1 {
-	position:absolute;
-	left:flex;
-	top:flex;
-	width:flex;
-	height:flex;
-	z-index:flex;
+        #main-container {
+            background: lightgray;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #Footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color: #fff;
+            font: 0.8em Cambria;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+        }
+
+        #footer-container {
+            background: lightgray;
+            padding: 10px;
+            margin: 10px;
+        }
+#scrolling-line {
+  padding: 10px;
+  color: #0070FF;
+  font: 0.9em Tahoma;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
 }
-.style1 {
-	font-size: small;
-	font-weight: bold;
-	color: #999999;
+
+#scrolling-line span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 18s linear infinite;
 }
-.style3 {
-	font-size: xx-small;
-	color: #333333;
-	font-weight: xx-small;
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
-.style4 {font-size: x-small}
-.style5 {color: #999999; font-size: small;}
-.style6 {
-	color: #660000;
-	font-weight: normal;
-	font-size: small;
+        .search-result td {
+            background-color: #333;
+            color: #FFF;
+            padding: 10px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: auto;
+            max-width: 100%;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            margin: 5px 0;
+        }
+
+        .space {
+            margin-bottom: 50px;
+        }
+
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .popup-content {
+            display: none;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 200px;
+            max-width: 400px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 1;
+            text-align: center;
+            font-size: 0.9em;
+            color: #333; /* Change the text color */
+            background-color: #fff; /* Change the background color */
+        }
+
+        .popup-question-mark {
+            display: inline-block;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.8em;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .popup:hover .popup-content {
+            display: block;
 }
-.style7 {color: #999999}
-.style8 {color: #999999}
--->
+#contact-me {
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+#contact-me h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+#contact-form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+#contact-form button:hover {
+  background-color: #0070FF;
+  color: #FFF;
+  cursor: pointer;
+}
+        }
     </style>
 </head>
 
-<img src="VIA2.jpg">	
+<body>
+    <div id="main">
+        <div id="banner">
+            <div id="search">
+                <header>
+                    <h1>Airport Contact Numbers</h1>
+                </header>
 
-	<body>
-<form name="data">
+                <div style="margin-bottom: 100px;"></div>
 
-		<div id="main">
-	
-			<div id="Banner">
- 
-				<center></center>
- 
-			<div id="Search">
+                <input type="text" name="gets" onKeyUp="getResult()" id="text" placeholder="Search...">
 
-				<input type="text" name="gets" onKeyUp="getResult()" id="Text">
+                <div class="popup">
+                    <span class="popup-question-mark">&#63;</span>
+                    <div class="popup-content">
+                        <p>Enter a Name to get the result.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <table id="table" style="display: none;">
+                <tr>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Counter</th>
+                </tr>
+            </table>
+            <div id="scrolling-line">
+                <span>:.::PLEASE LEAVE ANY NUMBERS YOU WISH TO UPDATE IN THE NOTEPAD, I WILL UPDATE THEM AS SOON AS POSSIBLE. IF ANY NUMBER NEEDS TO BE UPDATED IMMEDIATELY SEND ME A MSG.  THANK YOU!!::.:</span>
+            </div>
+<div id="contact-me">
+      <h2>Contact Me</h2>
+      <form id="contact-form" action="send_email.php" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+        </div>
+    </div>
+    <div id="Footer">
+        <p>Terminal Operations &copy; 2023. Ali Ashham</p>
+    </div>
+    <p>&nbsp;</p>
 
-			</div>
-			
-			<div id="Content">
-
-				<script type="text/javascript">
-
-					getTable();		
-
-				</script>
-
-			</div>
-
-		</form>
-
-<marquee behavior="scroll" scrollamount="8" scrolldelay="95" direction="left"><b><font color=rgb(251,190,39) name="Tahoma">:.::PLZ LEAVE ANY NUMBERS YOU WISH TO UPDATE IN THE NOTEPAD OR SIMPLY SEND ME A MESSAGE, I WILL UPDATE THEM AS SOON AS POSSIBLE THANK YOU!! ::.:</font></marquee></m>
-
-<div id="XNA">
-<table align ="middle" class="bodytextred">
-<td >
-
-
-        <center></center>
-			
-
-
-  </table>
-</div>
-			
-<img src="VIA.png">
-
-</div>
-	
-<div id="Footer">
-
-				<div align="center">
-				  <p><font color=rgb(0,0,0)></font></p>
-
-<p style="color:grey;">Terminal Operations © 2023 .Ali Ashham.</p>
-</div>
-
-
-
-<p>&nbsp;</p>
+    <script src="include2.js"></script>
 </body>
+
+</html>
