@@ -215,9 +215,11 @@ body {
   margin: 20px auto;
   padding: 20px;
   background: rgba(255, 255, 255, 0.7);
-  width: 100%;
-  max-width: 400px;
+  width: 80%;
+  max-width: 600px;
   box-sizing: border-box;
+  height: 350px;
+  margin-top: 20px;
 }
 
 #contact-me h2 {
