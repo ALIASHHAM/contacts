@@ -77,6 +77,8 @@
             width: 100%;
             box-sizing: border-box;
             overflow-x: auto;
+            position: relative;
+            z-index: 1;
         }
 
         table {
@@ -131,15 +133,15 @@
             padding: 10px;
             margin: 10px;
         }
-#scrolling-line {
-  padding: 10px;
-  color: #0070FF;
-  font: 0.9em Tahoma;
-  font-weight: bold;
-  background: rgba(255, 255, 255, 0.7);
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
+        #scrolling-line {
+              padding: 10px;
+              color: #0070FF;
+              font: 0.9em Tahoma;
+              font-weight: bold;
+              background: rgba(255, 255, 255, 0.7);
+              overflow: hidden;
+              white-space: nowrap;
+              position: relative;
 }
 
 #scrolling-line span {
@@ -266,7 +268,7 @@
   color: #FFF;
   cursor: pointer;
 }
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   #search {
     margin-top: 70px;
   }
