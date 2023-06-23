@@ -21,7 +21,7 @@
 
 .tab-container a {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 10px;
   padding: 10px;
   background-color: #f2f2f2;
   color: #333;
@@ -31,14 +31,22 @@
 }
 
 .tab-container a.home-tab,
-.tab-container a.contact-me-tab {
-  background-color: #0070FF;
-  color: #FFF;
+.tab-container a.contact-me-tab,
+.tab-container a.trclayout-tab {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #0070FF;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 .tab-container a.home-tab:hover,
-.tab-container a.contact-me-tab:hover {
-  background-color: #0059b3;
+.tab-container a.contact-me-tab:hover,
+.tab-container a.trclayout-tab:hover {
+    background-color: #0059b3;
 }
 @media (max-width: 600px) {
   #search {
