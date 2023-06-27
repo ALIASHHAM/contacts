@@ -173,9 +173,12 @@
       color: #fff;
     }
 
-   /* Mobile Menu */
+    /* Mobile Menu */
     .mobile-menu {
       display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
       flex-direction: column;
       align-items: flex-end;
       padding: 10px;
@@ -199,6 +202,11 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+    }
+
+    /* Hide tabs above the menu bar when mobile menu is active */
+    .nav-links.show ~ .nav-link-item {
+      display: none;
     }
 
     /* Media Query for screens up to 480px */
