@@ -217,3 +217,38 @@ tr:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
 }
+@media only screen and (max-width: 480px) {
+  body {
+    background-size: auto;
+  }
+
+  #banner {
+    height: 30vh;
+  }
+
+  #header {
+    font-size: 1.8em;
+  }
+
+  #text {
+    font-size: 1.5em;
+  }
+
+  #resetButton {
+    font-size: 0.8em;
+    padding: 5px 10px;
+  }
+
+  table {
+    font-size: 0.8em;
+  }
+
+  .nav-logo {
+    font-size: 20px;
+  }
+
+  .nav-link-item a {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
