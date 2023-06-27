@@ -36,10 +36,10 @@
 
     .nav-links {
       list-style-type: none;
-      display: flex;
+      display: none;
       align-items: center;
-      margin: 3;
-      padding: 3;
+      margin: 0;
+      padding: 0;
     }
 
     .nav-link-item {
@@ -59,6 +59,65 @@
       color: #fff;
     }
 
+    /* Mobile Menu */
+    .mobile-menu {
+      display: flex;
+      align-items: center;
+    }
+
+    .mobile-menu-icon {
+      font-size: 25px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .mobile-menu-dropdown {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 150px;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-menu-dropdown-item {
+      margin-top: 5px;
+    }
+
+    .mobile-menu-dropdown-item a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* Show/hide mobile menu dropdown */
+    .mobile-menu.show .mobile-menu-dropdown {
+      display: flex;
+    }
+
+    /* Media Query for screens up to 480px */
+    @media only screen and (max-width: 480px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu.show .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+      }
+
+      .nav-link-item a {
+        padding: 10px;
+      }
+    }
+
     /* About Section */
     #about-section {
       background-color: rgba(242, 242, 242, 0.8);
@@ -69,7 +128,6 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       margin-top: 90px;
       width: 50%;
-
     }
 
     #about-section h2 {
@@ -109,27 +167,50 @@
   <div id="main">
     <div class="nav-container">
       <a class="nav-logo" href="#">Terminal Operations</a>
-      <ul class="nav-links">
-        <li class="nav-link-item"><a href="index.html">Home</a></li>
-        <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
-        <li class="nav-link-item"><a href="about.html">About</a></li>
-        <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
-      </ul>
+      <div class="mobile-menu">
+        <div class="mobile-menu-icon" id="mobile-menu-icon">&#9776;</div>
+        <ul class="nav-links">
+          <li class="nav-link-item"><a href="index.html">Home</a></li>
+          <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
+          <li class="nav-link-item"><a href="about.html">About</a></li>
+          <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="mobile-menu-dropdown">
+        <div class="mobile-menu-dropdown-item"><a href="index.html">Home</a></div>
+        <div class="mobile-menu-dropdown-item"><a href="trclayout.html">TRC Layout</a></div>
+        <div class="mobile-menu-dropdown-item"><a href="about.html">About</a></div>
+        <div class="mobile-menu-dropdown-item"><a href="contactme.html">Contact</a></div>
+      </div>
     </div>
     <div id="about-section">
       <h2>About</h2>
-      <p>This webpage provides essential contact information for various entities related to terminal operations. It serves as a comprehensive directory, encompassing contact numbers for terminal operations staff, internal numbers, airline numbers, resorts, resort representatives, guesthouses in Male, Hulhumale, and various islands.<p>
-
-<p>Furthermore, this page also offers the layout and corresponding counter numbers for the resorts situated in the TRC (Tourist Representative Counter Area). By providing this information, the webpage aims to facilitate efficient communication and coordination within the terminal operations environment, ensuring smooth interactions and assistance for visitors, guests, and staff members alike.</p>
- 
-
- <p>Thank You!<p>
-
-  </div>
+      <p>This webpage provides essential contact information for various entities related to terminal operations. It serves as a comprehensive directory, encompassing contact numbers for terminal operations staff, internal numbers, airline numbers, resorts, resort representatives, guesthouses in Male, Hulhumale, and various islands.</p>
+      <p>Furthermore, this page also offers the layout and corresponding counter numbers for the resorts situated in the TRC (Tourist Representative Counter Area). By providing this information, the webpage aims to facilitate efficient communication and coordination within the terminal operations environment, ensuring smooth interactions and assistance for visitors, guests, and staff members alike.</p>
+      <p>Thank You!</p>
+    </div>
     <div id="footer">
       <p>Terminal Operations &copy; 2023. Ali Ashham</p>
     </div>
   </div>
+  <script>
+    // JavaScript code to toggle visibility of mobile menu dropdown
+    document.addEventListener('DOMContentLoaded', function() {
+      var mobileMenuIcon = document.getElementById('mobile-menu-icon');
+      var mobileMenuDropdown = document.querySelector('.mobile-menu-dropdown');
+
+      mobileMenuIcon.addEventListener('click', function() {
+        mobileMenuIcon.parentElement.classList.toggle('show');
+      });
+
+      document.addEventListener('click', function(event) {
+        var targetElement = event.target;
+        if (!targetElement.matches('.mobile-menu-icon') && !targetElement.matches('.mobile-menu-dropdown') && !targetElement.matches('.mobile-menu-dropdown-item')) {
+          mobileMenuIcon.parentElement.classList.remove('show');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
