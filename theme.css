@@ -217,6 +217,7 @@ tr:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
 }
+/* Media Query for screens up to 480px */
 @media only screen and (max-width: 480px) {
   body {
     background-size: auto;
@@ -228,7 +229,7 @@ tr:nth-child(odd) {
 
   #header {
     font-size: 1.8em;
-    margin-top: 70px;
+    margin-top: 80px; /* Add a top margin to push the header below the navigation bar */
   }
 
   #text {
@@ -244,12 +245,48 @@ tr:nth-child(odd) {
     font-size: 0.8em;
   }
 
-  .nav-logo {
-    font-size: 20px;
+  /* Mobile Navigation Menu */
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link-item {
+    margin: 10px;
   }
 
   .nav-link-item a {
-    font-size: 12px;
+    font-size: 1.2em;
     padding: 10px;
   }
+
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  .nav-logo {
+    font-size: 20px;
+    margin: 10px;
+  }
+
+  /* Search Bar */
+  #search {
+    max-width: 300px; /* Adjust the max-width to center the search bar */
+    margin: 20px auto; /* Add margin to center the search bar */
+  }
 }
+
