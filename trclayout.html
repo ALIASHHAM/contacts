@@ -171,7 +171,40 @@ text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
 }
+@media only screen and (max-width: 480px) {
+      body {
+        padding: 10px; /* Adjust the padding for smaller screens */
+      }
 
+      h1 {
+        font-size: 1.5em; /* Decrease the font size for smaller screens */
+      }
+
+      input[type="text"] {
+        padding: 15px; /* Decrease the padding for smaller screens */
+        font-size: 16px; /* Decrease the font size for smaller screens */
+      }
+
+      .seat {
+        width: 100px; /* Adjust the width for smaller screens */
+        height: 70px; /* Adjust the height for smaller screens */
+        font-size: 8px; /* Decrease the font size for smaller screens */
+      }
+
+      .seat-number {
+        font-size: 14px; /* Decrease the font size for smaller screens */
+        padding: 3px; /* Decrease the padding for smaller screens */
+      }
+
+      .seat-names {
+        font-size: 10px; /* Decrease the font size for smaller screens */
+        padding: 3px; /* Decrease the padding for smaller screens */
+      }
+
+      .pdf-embed {
+        height: 400px; /* Adjust the height for smaller screens */
+      }
+}
   </style>
   <script src="seating.js"></script>
 </head>
