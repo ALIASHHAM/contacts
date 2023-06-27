@@ -235,7 +235,10 @@
       .mobile-menu {
         display: flex;
       }
-    
+      
+      .nav-container {
+        flex-direction: column;
+      }
     }
   </style>
   <script src="seating.js"></script>
@@ -254,19 +257,19 @@
 <body>
   <div class="nav-container">
     <a class="nav-logo" href="#">Terminal Operations</a>
+    <div class="mobile-menu" id="mobile-menu">
+      <div style="cursor: pointer;">Menu &#9776;</div>
+      <div class="nav-link-item"><a href="index.html">Home</a></div>
+      <div class="nav-link-item"><a href="trclayout.html">TRC Layout</a></div>
+      <div class="nav-link-item"><a href="about.html">About</a></div>
+      <div class="nav-link-item"><a href="contactme.html">Contact</a></div>
+    </div>
     <ul class="nav-links" id="nav-links">
       <li class="nav-link-item"><a href="index.html">Home</a></li>
       <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
       <li class="nav-link-item"><a href="about.html">About</a></li>
       <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
     </ul>
-    <div class="mobile-menu" id="mobile-menu">
-      <div id="mobile-menu" style="cursor: pointer;">Menu &#9776;</div>
-      <div class="nav-link-item"><a href="index.html">Home</a></div>
-      <div class="nav-link-item"><a href="trclayout.html">TRC Layout</a></div>
-      <div class="nav-link-item"><a href="about.html">About</a></div>
-      <div class="nav-link-item"><a href="contactme.html">Contact</a></div>
-    </div>
   </div>
 
   <h1>Tourist Representative Counters</h1>
@@ -281,3 +284,4 @@
   </div>
 </body>
 </html>
+
