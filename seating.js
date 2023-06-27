@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 {seatnumber:"B8",names:["Sun Siyam "," Sun Siyam Olhuveli ",""," Sun Siyam Travels","","","","","","",""]},
 {seatnumber:"B9",names:["Crown & Champa "," Kudadhoo Private Island ","Meeru Island"," Hurawalhi Island"," Kagi Maldives"," Veligandu Island"," Komandoo Island"," Vilamendhoo Island"," Kuredu Island"," Innahura Maldives"," Champa Central Hotel"]},
 {seatnumber:"C1",names:["Outrigger Maldives Maafushivaru","","","","","","","","","",""]},
-{seatnumber:"C2",names:["Mövenpick Resort Kuredhivaru Maldives","","","","","","","","","",""]},
+{seatnumber:"C2",names:["Movenpick Resort Kuredhivaru Maldives","","","","","","","","","",""]},
 {seatnumber:"C3",names:["Vermillion","","","","","","","","","",""]},
 {seatnumber:"C4",names:["Travel Factory","","","","","","","","","",""]},
 {seatnumber:"C5",names:["Sunset Maldives","","","","","","","","","",""]},
