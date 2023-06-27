@@ -132,7 +132,7 @@
     /* Navigation Bar */
     .nav-container {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between; /* Added */
       align-items: center;
       background-color: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(10px);
@@ -172,7 +172,7 @@
       background-color: rgba(0, 0, 0, 0.5);
       color: #fff;
     }
-    
+
     /* Mobile Menu */
     .mobile-menu {
       display: none;
@@ -228,7 +228,7 @@
       .pdf-embed {
         height: 400px; /* Adjust the height for smaller screens */
       }
-      
+
       .nav-links {
         display: none;
       }
@@ -236,14 +236,14 @@
       .mobile-menu {
         display: flex;
       }
-      
+
       .nav-container {
-        flex-direction: column;
+        flex-direction: column-reverse; /* Updated */
       }
     }
   </style>
   <script src="seating.js"></script>
- <script>
+  <script>
     // JavaScript code to toggle visibility of mobile menu
     document.addEventListener('DOMContentLoaded', function() {
       var mobileMenu = document.getElementById('mobile-menu');
@@ -285,4 +285,3 @@
   </div>
 </body>
 </html>
-
