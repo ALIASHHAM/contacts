@@ -9,413 +9,55 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" type="text/css" href="hacks.css">
     <link rel="stylesheet" type="text/css" href="theme.css">
-    <style>
-       body {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("Male.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  height: 100vh;
-}
-
-#main {
-  margin-top: 33vh;
-  flex-grow: 1;
-  margin: 0;
-  padding: 0;
-  border: 0px solid #FC;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  
-}
-#banner {
-  padding: 0;
-  color: #FFF;
-  font: 1.0em Cambria;
-  background: url("new.jpg") no-repeat center center / cover;
-  border: 1px solid rgb(218, 218, 218);
-  box-sizing: border-box;
-  width: 100%;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margine-bottom: -150px;
-
-}
-
-.fixed-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-}
-
-#search {
-  margin: 20px auto;
-  text-align: center;
-  width: 100%;
-}
-
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.popup-content {
-  display: none;
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  min-width: 200px;
-  max-width: 400px;
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  padding: 10px;
-  z-index: 1;
-  text-align: center;
-  font-size: 0.9em;
-  color: #333; /* Change the text color */
-  background-color: #fff; /* Change the background color */
-}
-
-.popup-question-mark {
-  display: inline-block;
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.2em;
-  color: #333;
-  cursor: pointer;
-}
-
-.popup:hover .popup-content {
-  display: block;
-}
-
-#text {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  color: rgb(10, 10, 10);
-  font: 2em Cambria;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-
-#content {
-  margin: 20px auto;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.7);
-  width: 100%;
-  box-sizing: border-box;
-  overflow-x: auto;
-  position: relative;
-}
-
-table {
-  margin: 0 auto;
-  border-collapse: collapse;
-  table-layout: fixed;
-  width: 100%;
-  max-width: 100%;
-}
-
-th {
-  background-color: #1d3d4e;
-  color: #FFFFFF;
-  padding: 10px;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-  max-width: 100%;
-  font-weight: bold;
-  font: 1.2em Cambria;
-}
-
-td {
-  padding: 10px;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-  max-width: 100%;
-  font-weight: bold;
-}
-
-tr:nth-child(even) {
-  background-color: #abdfff;
-}
-
-tr:nth-child(odd) {
-  background-color: #c9e9ff;
-
-}
-
-#main-container {
-  background: lightgray;
-  padding: 10px;
-  margin: 10px;
-}
-
-#Footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  color: #717171;
-  font: 0.8em Cambria;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 10px;
-}
-
-#footer-container {
-  background: lightgray;
-  padding: 10px;
-  margin: 10px;
-}
-
-#scrolling-line {
-  padding: 10px;
-  color: #0070FF;
-  font: 0.9em Tahoma;
-  font-weight: bold;
-  background: rgba(255, 255, 255, 0.7);
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-}
-
-#scrolling-line span {
-  display: inline-block;
-  padding-left: 100%;
-  animation: marquee 18s linear infinite;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.search-result td {
-  background-color: #0099FF;
-  color: #99CCFF;
-  padding: 10px;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-  max-width: 100%;
-}
-
-header {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px;
-}
-
-header h1 {
-  margin: 0;
-}
-
-header p {
-  margin: 5px 0;
-}
-
-.space {
-  margin-bottom: 50px;
-}
-
-#contact-me {
-            margin: 20px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.7);
-            width: 80%;
-            max-width: 600px;
-            box-sizing: border-box;
-            height: 350px;
-            margin-top: 20px;
-        }
-
-        #contact-me h2 {
-            margin-top: 0;
-            text-align: center;
-        }
-
-        #contact-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #contact-form label {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        #contact-form input,
-        #contact-form textarea {
-            width: 100%;
-            max-width: 300px;
-            padding: 10px;
-            margin-top: 5px;
-            box-sizing: border-box;
-        }
-
-        #contact-form button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            font-weight: bold;
-        }
-
-        #contact-form button:hover {
-            background-color: #0070FF;
-            color: #FFF;
-            cursor: pointer;
-        }
-
-        .contact-me-hidden {
-            position: center;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-        }
-
-        .contact-me-tab {
-            padding: 10px 20px;
-            background-color: #0070FF;
-            color: #FFF;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .contact-me-tab:hover {
-            background-color: #0059b3;
-        }
-
-        .trclayout-tab {
-            padding: 10px 20px;
-            background-color: #0070FF;
-            color: #FFF;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .trclayout-tab:hover {
-            background-color: #0059b3;
-        }
-
-        @media (max-width: 600px) {
-            #search {
-                margin-top: 70px;
-            }
-
-            #content {
-                margin-top: 20px;
-            }
-        }
-
-        .tab-container {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            align-items: center;
-            z-index: 999;
-        }
-
-        .tab-container a {
-            display: inline-block;
-            padding: 10px;
-            background-color: #f2f2f2;
-            color: #333;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-
-.tab-container a.home-tab,
-.tab-container a.contact-me-tab,
-.tab-container a.trclayout-tab {
-    display: inline-block;
-    margin-left: 10px;
-    padding: 10px;
-    background-color: #0070FF;
-    color: #FFF;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.tab-container a.home-tab:hover,
-.tab-container a.contact-me-tab:hover,
-.tab-container a.trclayout-tab:hover {
-    background-color: #0059b3;
-}
-
-    </style>
 </head>
 
 <body>
     <div id="main">
-        <div id="banner" class="fixed-banner">
+        <div class="nav-container">
+            <a class="nav-logo" href="#">Terminal Operations</a>
+            <ul class="nav-links">
+                <li class="nav-link-item"><a href="index.html">Home</a></li>
+                <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
+                <li class="nav-link-item"><a href="about.html">About</a></li>
+                <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
+            </ul>
+        </div>
 
+        <div id="banner">
+            <h1 id="header">Airport Contact Numbers</h1>
             <div id="search">
-                <header>
-                    <h1>Airport Contact Numbers</h1>
-                </header>
-
-                <div style="margin-bottom: 100px;"></div>
-
                 <input type="text" name="gets" onKeyUp="getResult()" id="text" placeholder="Search...">
-
-                <div class="popup">
-                    <span class="popup-question-mark">&#63;</span>
-                    <div class="popup-content">
-                        <p>Enter a Name to get the result.</p>
-                    </div>
-                </div>
+<button id="resetButton" onclick="resetSearch()">Reset</button>
+           
             </div>
         </div>
-        <div id="content" style="margin-top: 60vh;">
-            <table id="table" style="display: none;">
+
+        <div id="content">
+            <table id="table">
                 <tr>
                     <th>Name</th>
                     <th>Number</th>
                     <th>Counter</th>
                 </tr>
             </table>
+
             <div id="scrolling-line">
-                <span>:.::PLEASE LEAVE ANY NUMBERS YOU WISH TO UPDATE IN THE NOTEPAD, I WILL UPDATE THEM AS SOON AS POSSIBLE. IF ANY NUMBER NEEDS TO BE UPDATED IMMEDIATELY SEND ME A MSG.  THANK YOU!!::.:</span>
+                <span>:.::ENTER THE NAME IN THE SEARCH BAR TO GET THE REQUIRED NUMBER. IF THERE ARE ANY CHANGES KINDLY SEND ME A MSG FROM THE CONTACT ME SECTION::.:</span>
             </div>
         </div>
-        <div id="Footer">
-        <p>Terminal Operations &copy; 2023. Ali Ashham</p>
+
+        <div id="footer">
+            <p>Terminal Operations &copy; 2023. Ali Ashham</p>
+        </div>
+
+        <script src="include2.js"></script>
+ <script>
+            function resetSearch() {
+                document.getElementById("text").value = "";
+                getResult(); // Call the search function to update the results after resetting
+            }
+        </script>
     </div>
-        <div class="tab-container">
-            <a href="index.html" class="home-tab">Home</a>
-            <a href="contactme.html" class="contact-me-tab">Contact Me</a>
-            <a href="trclayout.html" class="trclayout-tab">TRCLayout</a>
-</div>
-</div>
-    <script src="include2.js"></script>
 </body>
 
 </html>
