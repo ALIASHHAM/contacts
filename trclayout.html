@@ -132,7 +132,7 @@
     /* Navigation Bar */
     .nav-container {
       display: flex;
-      justify-content: space-between; /* Added */
+      justify-content: space-between;
       align-items: center;
       background-color: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(10px);
@@ -203,14 +203,6 @@
       align-items: flex-end;
     }
 
-    /* Hide tabs above the menu bar when mobile menu is active */
-    .nav-links.show ~ .nav-tabs {
-      display: none;
-    }
-    .hide {
-  display: none;
-}
-
     /* Media Query for screens up to 480px */
     @media only screen and (max-width: 480px) {
       body {
@@ -264,19 +256,20 @@
   </style>
   <script src="seating.js"></script>
   <script>
-  // JavaScript code to toggle visibility of mobile menu and tabs
-  document.addEventListener('DOMContentLoaded', function() {
-    var mobileMenu = document.getElementById('mobile-menu');
-    var navLinks = document.getElementById('nav-links');
-    var navTabs = document.getElementById('nav-tabs');
+    // JavaScript code to toggle visibility of mobile menu and tabs
+    document.addEventListener('DOMContentLoaded', function() {
+      var mobileMenu = document.getElementById('mobile-menu');
+      var navLinks = document.getElementById('nav-links');
+      var navTabs = document.getElementById('nav-tabs');
 
-    mobileMenu.addEventListener('click', function() {
-      navLinks.classList.toggle('show');
-      navTabs.classList.toggle('hide');
+      mobileMenu.addEventListener('click', function() {
+        navLinks.classList.toggle('show');
+        navTabs.classList.toggle('hide');
+      });
     });
-  });
-</script>
+  </script>
 </head>
+
 <body>
   <div class="nav-container">
     <a class="nav-logo" href="#">Terminal Operations</a>
