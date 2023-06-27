@@ -177,7 +177,7 @@
     .mobile-menu {
       display: none;
       flex-direction: column;
-      align-items: flex-end; /* Updated */
+      align-items: flex-end;
       padding: 10px;
       background-color: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(10px);
@@ -192,6 +192,13 @@
       text-decoration: none;
       color: #000;
       font-weight: bold;
+    }
+
+    /* Show/hide nav links on mobile menu click */
+    .nav-links.show {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
     }
 
     /* Media Query for screens up to 480px */
@@ -229,24 +236,24 @@
         height: 400px; /* Adjust the height for smaller screens */
       }
 
-      .nav-links {
-        display: none;
+   .nav-container {
+        flex-direction: column-reverse;
+        align-items: flex-start;
       }
 
       .mobile-menu {
         display: flex;
-        justify-content: space-between; /* Added */
-        width: 100%; /* Added */
+        justify-content: space-between;
+        width: 100%;
       }
 
-      .nav-container {
-        flex-direction: column-reverse; /* Updated */
-        align-items: flex-start; /* Added */
+      .nav-links {
+        display: none;
       }
     }
   </style>
   <script src="seating.js"></script>
-  <script>
+   <script>
     // JavaScript code to toggle visibility of mobile menu
     document.addEventListener('DOMContentLoaded', function() {
       var mobileMenu = document.getElementById('mobile-menu');
@@ -259,7 +266,7 @@
   </script>
 </head>
 <body>
- <div class="nav-container">
+<div class="nav-container">
     <a class="nav-logo" href="#">Terminal Operations</a>
     <div class="mobile-menu" id="mobile-menu">
       <div class="nav-link-item"><a href="index.html">Home</a></div>
