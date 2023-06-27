@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>About</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
   <meta property="og:image" content="via2.jpg">
   <meta property="og:image:alt" content="Airport Contacts">
   <link rel="shortcut icon" href="favicon.ico" />
@@ -37,8 +38,8 @@
       list-style-type: none;
       display: flex;
       align-items: center;
-      margin: 0;
-      padding: 0;
+      margin: 3;
+      padding: 3;
     }
 
     .nav-link-item {
@@ -63,9 +64,10 @@
       display: none;
     }
 
-    .menu-icon {
+    .mobile-menu-icon {
       font-size: 25px;
       cursor: pointer;
+      margin-right: 10px;
     }
 
     .mobile-menu-dropdown {
@@ -107,6 +109,7 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       margin-top: 90px;
       width: 50%;
+
     }
 
     #about-section h2 {
@@ -140,77 +143,14 @@
       margin: 0;
     }
 
-    /* Media Query for screens up to 768px */
-    @media (max-width: 768px) {
+    /* Media Queries */
+    @media only screen and (max-width: 768px) {
       .nav-links {
         display: none;
       }
 
       .mobile-menu {
         display: flex;
-        align-items: center;
-      }
-
-      .mobile-menu-icon {
-        font-size: 25px;
-        cursor: pointer;
-        margin-right: 10px;
-      }
-
-      .mobile-menu-dropdown {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(10px);
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 150px;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      }
-
-      .mobile-menu-dropdown-item {
-        margin-top: 5px;
-      }
-
-      .mobile-menu-dropdown-item a {
-        text-decoration: none;
-        color: #000;
-        font-weight: bold;
-      }
-
-      /* Show/hide mobile menu dropdown */
-      .mobile-menu.show .mobile-menu-dropdown {
-        display: flex;
-      }
-
-      #about-section {
-        width: 90%;
-        margin: 20px auto;
-      }
-
-      #about-section h2 {
-        font-size: 1.8em;
-        margin-bottom: 15px;
-      }
-
-      #about-section p {
-        font-size: 1.1em;
-        margin-bottom: 15px;
-      }
-    }
-
-    /* Media Query for screens from 769px and above */
-    @media (min-width: 769px) {
-      .nav-container {
-        padding: 5px;
-      }
-
-      #about-section {
-        margin-top: 90px;
-        width: 50%;
       }
     }
   </style>
@@ -258,7 +198,7 @@
 
       document.addEventListener('click', function(event) {
         var targetElement = event.target;
-        if (!targetElement.matches('.mobile-menu-icon') && !targetElement.matches('.mobile-menu-dropdown') && !targetElement.matches('.mobile-menu-dropdown-item')) {
+        if (!targetElement.matches('.mobile-menu-icon')) {
           mobileMenuIcon.parentElement.classList.remove('show');
         }
       });
