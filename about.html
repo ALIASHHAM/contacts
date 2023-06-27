@@ -59,6 +59,31 @@
       color: #fff;
     }
 
+    /* Mobile Menu */
+    .mobile-menu-icon {
+      display: none;
+    }
+
+    .mobile-menu-dropdown {
+      display: none;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 10px;
+    }
+
+    .mobile-menu-dropdown a {
+      display: block;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .mobile-menu-dropdown a:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+    }
+
     /* About Section */
     #about-section {
       background-color: rgba(242, 242, 242, 0.8);
@@ -69,6 +94,7 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       margin-top: 90px;
       width: 50%;
+
     }
 
     #about-section h2 {
@@ -102,41 +128,17 @@
       margin: 0;
     }
 
-    /* Mobile Styles */
-    @media (max-width: 768px) {
+    /* Responsive Styles */
+    @media only screen and (max-width: 768px) {
       .nav-links {
         display: none;
-      }
-
-      .nav-container {
-        flex-direction: column;
       }
 
       .mobile-menu-icon {
         display: block;
         font-size: 25px;
-        padding: 10px;
+        margin-right: 10px;
         cursor: pointer;
-      }
-
-      .mobile-menu-dropdown {
-        display: none;
-        background-color: rgba(255, 255, 255, 0.7);
-        padding: 10px;
-      }
-
-      .mobile-menu-dropdown a {
-        display: block;
-        padding: 10px;
-        border-radius: 5px;
-        text-decoration: none;
-        color: #000;
-        font-weight: bold;
-      }
-
-      .mobile-menu-dropdown a:hover {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fff;
       }
 
       #about-section {
@@ -144,7 +146,7 @@
         margin-top: 170px;
       }
 
-      .show {
+      .mobile-menu-dropdown.show {
         display: block;
       }
     }
@@ -155,19 +157,15 @@
   <div id="main">
     <div class="nav-container">
       <a class="nav-logo" href="#">Terminal Operations</a>
-      <div class="mobile-menu-icon">&#9776;</div>
+      <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+        &#9776;
+      </div>
       <ul class="nav-links">
         <li class="nav-link-item"><a href="index.html">Home</a></li>
         <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
         <li class="nav-link-item"><a href="about.html">About</a></li>
         <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
       </ul>
-      <div class="mobile-menu-dropdown">
-        <a href="index.html">Home</a>
-        <a href="trclayout.html">TRC Layout</a>
-        <a href="about.html">About</a>
-        <a href="contactme.html">Contact</a>
-      </div>
     </div>
     <div id="about-section">
       <h2>About</h2>
@@ -179,22 +177,20 @@
       <p>Terminal Operations &copy; 2023. Ali Ashham</p>
     </div>
   </div>
-
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
-      const mobileMenuDropdown = document.querySelector('.mobile-menu-dropdown');
+    function toggleMobileMenu() {
+      var dropdownMenu = document.getElementById("mobile-menu-dropdown");
+      dropdownMenu.classList.toggle("show");
+    }
 
-      mobileMenuIcon.addEventListener('click', function () {
-        mobileMenuDropdown.classList.toggle('show');
-      });
-
-      document.addEventListener('click', function (event) {
-        if (!mobileMenuIcon.contains(event.target) && !mobileMenuDropdown.contains(event.target)) {
-          mobileMenuDropdown.classList.remove('show');
+    window.onclick = function(event) {
+      if (!event.target.matches(".mobile-menu-icon")) {
+        var dropdownMenu = document.getElementById("mobile-menu-dropdown");
+        if (dropdownMenu.classList.contains("show")) {
+          dropdownMenu.classList.remove("show");
         }
-      });
-    });
+      }
+    };
   </script>
 </body>
 
