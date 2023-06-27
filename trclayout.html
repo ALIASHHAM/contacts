@@ -153,24 +153,34 @@
       align-items: center;
       margin: 0;
       padding: 0;
+      position: relative;
     }
 
     .nav-link-item {
       margin-left: 10px;
     }
 
-    .nav-link-item a {
+        .nav-link-item a {
       text-decoration: none;
       color: #000;
       font-weight: bold;
       padding: 10px;
       border-radius: 5px;
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f5f5f5;
     }
 
-    .nav-link-item a:hover {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
+    .nav-link-item:hover a {
+      background-color: #d8d8d8;
     }
+
+    .nav-link-item:hover a,
+    .nav-link-item a:focus {
+      display: block;
+        }
     
     /* Mobile Menu */
     .mobile-menu {
@@ -228,21 +238,48 @@
         height: 400px; /* Adjust the height for smaller screens */
       }
       
+@media screen and (max-width: 768px) {
       .nav-links {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        background-color: #f5f5f5;
+      }
+
+      .nav-link-item {
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-link-item a {
+        display: block;
+        text-align: center;
+        padding: 10px;
       }
 
       .mobile-menu {
         display: flex;
-      }
-      
-      .nav-container {
-        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
       }
     }
   </style>
   <script src="seating.js"></script>
  <script>
+    // JavaScript code to toggle visibility of mobile menu
+    document.addEventListener('DOMContentLoaded', function() {
+      var mobileMenu = document.getElementById('mobile-menu');
+      var navLinks = document.getElementById('nav-links');
+
+      mobileMenu.addEventListener('click', function() {
+        navLinks.classList.toggle('show');
+      });
+    });
+  <script>
     // JavaScript code to toggle visibility of mobile menu
     document.addEventListener('DOMContentLoaded', function() {
       var mobileMenu = document.getElementById('mobile-menu');
@@ -259,17 +296,13 @@
     <a class="nav-logo" href="#">Terminal Operations</a>
     <div class="mobile-menu" id="mobile-menu">
       <div style="cursor: pointer;">Menu &#9776;</div>
-      <div class="nav-link-item"><a href="index.html">Home</a></div>
-      <div class="nav-link-item"><a href="trclayout.html">TRC Layout</a></div>
-      <div class="nav-link-item"><a href="about.html">About</a></div>
-      <div class="nav-link-item"><a href="contactme.html">Contact</a></div>
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-link-item"><a href="index.html">Home</a></li>
+        <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
+        <li class="nav-link-item"><a href="about.html">About</a></li>
+        <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
+      </ul>
     </div>
-    <ul class="nav-links" id="nav-links">
-      <li class="nav-link-item"><a href="index.html">Home</a></li>
-      <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
-      <li class="nav-link-item"><a href="about.html">About</a></li>
-      <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
-    </ul>
   </div>
 
   <h1>Tourist Representative Counters</h1>
