@@ -171,7 +171,8 @@
       background-color: rgba(0, 0, 0, 0.5);
       color: #fff;
     }
- /* Mobile Menu */
+    
+    /* Mobile Menu */
     .mobile-menu {
       display: none;
       flex-direction: column;
@@ -226,7 +227,8 @@
       .pdf-embed {
         height: 400px; /* Adjust the height for smaller screens */
       }
-.nav-links {
+      
+      .nav-links {
         display: none;
       }
 
@@ -252,13 +254,13 @@
 <body>
   <div class="nav-container">
     <a class="nav-logo" href="#">Terminal Operations</a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li class="nav-link-item"><a href="index.html">Home</a></li>
       <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
       <li class="nav-link-item"><a href="about.html">About</a></li>
       <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
     </ul>
-<div class="mobile-menu">
+    <div class="mobile-menu" id="mobile-menu">
       <div class="nav-link-item"><a href="index.html">Home</a></div>
       <div class="nav-link-item"><a href="trclayout.html">TRC Layout</a></div>
       <div class="nav-link-item"><a href="about.html">About</a></div>
