@@ -153,7 +153,6 @@
       align-items: center;
       margin: 0;
       padding: 0;
-
     }
 
     .nav-link-item {
@@ -173,7 +172,7 @@
       color: #fff;
     }
 
-     /* Mobile Menu */
+    /* Mobile Menu */
     .mobile-menu {
       display: none;
       position: absolute;
@@ -208,7 +207,7 @@
     .nav-links.show ~ .nav-tabs {
       display: none;
     }
-    
+
     /* Media Query for screens up to 480px */
     @media only screen and (max-width: 480px) {
       body {
@@ -244,7 +243,7 @@
         height: 400px; /* Adjust the height for smaller screens */
       }
 
-   .nav-container {
+      .nav-container {
         flex-direction: column-reverse;
         align-items: flex-start;
       }
@@ -261,7 +260,7 @@
     }
   </style>
   <script src="seating.js"></script>
-   <script>
+  <script>
     // JavaScript code to toggle visibility of mobile menu
     document.addEventListener('DOMContentLoaded', function() {
       var mobileMenu = document.getElementById('mobile-menu');
@@ -276,12 +275,6 @@
 <body>
   <div class="nav-container">
     <a class="nav-logo" href="#">Terminal Operations</a>
-    <ul class="nav-links" id="nav-links">
-      <li class="nav-link-item"><a href="index.html">Home</a></li>
-      <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
-      <li class="nav-link-item"><a href="about.html">About</a></li>
-      <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
-    </ul>
     <div class="mobile-menu" id="mobile-menu">
       <div class="nav-link-item"><a href="index.html">Home</a></div>
       <div class="nav-link-item"><a href="trclayout.html">TRC Layout</a></div>
@@ -289,6 +282,12 @@
       <div class="nav-link-item"><a href="contactme.html">Contact</a></div>
       <div style="cursor: pointer;">Menu &#9776;</div>
     </div>
+    <ul class="nav-links" id="nav-links">
+      <li class="nav-link-item"><a href="index.html">Home</a></li>
+      <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
+      <li class="nav-link-item"><a href="about.html">About</a></li>
+      <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
+    </ul>
   </div>
   <h1>Tourist Representative Counters</h1>
 
