@@ -109,8 +109,8 @@
 
     .pdf-embed {
       max-width: 100%;
-      width: 1550px;
-      height: 900px;
+      width: 100%;
+      height: 600px;
     }
 
     #Footer {
@@ -142,7 +142,7 @@
 
     .nav-logo {
       font-weight: bold;
-      font-size: 25px;
+      font-size: 20px;
       text-decoration: none;
       color: #000;
     }
@@ -163,7 +163,7 @@
       text-decoration: none;
       color: #000;
       font-weight: bold;
-      padding: 15px;
+      padding: 10px;
       border-radius: 5px;
     }
 
@@ -171,8 +171,7 @@
       background-color: rgba(0, 0, 0, 0.5);
       color: #fff;
     }
-
-    /* Mobile Menu */
+ /* Mobile Menu */
     .mobile-menu {
       display: none;
       flex-direction: column;
@@ -193,19 +192,52 @@
       font-weight: bold;
     }
 
-    /* Media Query for Mobile */
-    @media screen and (max-width: 480px) {
-      .nav-links {
+    /* Media Query for screens up to 480px */
+    @media only screen and (max-width: 480px) {
+      body {
+        padding: 10px; /* Adjust the padding for smaller screens */
+      }
+
+      h1 {
+        font-size: 1.5em; /* Decrease the font size for smaller screens */
+      }
+
+      input[type="text"] {
+        padding: 15px; /* Decrease the padding for smaller screens */
+        font-size: 16px; /* Decrease the font size for smaller screens */
+      }
+
+      .seat {
+        width: 100px; /* Adjust the width for smaller screens */
+        height: 70px; /* Adjust the height for smaller screens */
+        font-size: 8px; /* Decrease the font size for smaller screens */
+      }
+
+      .seat-number {
+        font-size: 14px; /* Decrease the font size for smaller screens */
+        padding: 3px; /* Decrease the padding for smaller screens */
+      }
+
+      .seat-names {
+        font-size: 10px; /* Decrease the font size for smaller screens */
+        padding: 3px; /* Decrease the padding for smaller screens */
+      }
+
+      .pdf-embed {
+        height: 400px; /* Adjust the height for smaller screens */
+      }
+.nav-links {
         display: none;
       }
 
       .mobile-menu {
         display: flex;
       }
+    
     }
   </style>
   <script src="seating.js"></script>
-  <script>
+ <script>
     // JavaScript code to toggle visibility of mobile menu
     document.addEventListener('DOMContentLoaded', function() {
       var mobileMenu = document.getElementById('mobile-menu');
@@ -220,18 +252,17 @@
 <body>
   <div class="nav-container">
     <a class="nav-logo" href="#">Terminal Operations</a>
-    <ul class="nav-links" id="nav-links">
+    <ul class="nav-links">
       <li class="nav-link-item"><a href="index.html">Home</a></li>
       <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
       <li class="nav-link-item"><a href="about.html">About</a></li>
       <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
     </ul>
-    <div class="mobile-menu">
-      <div id="mobile-menu" style="cursor: pointer;">Menu &#9776;</div>
-      <div class="mobile-menu-item"><a href="index.html">Home</a></div>
-      <div class="mobile-menu-item"><a href="trclayout.html">TRC Layout</a></div>
-      <div class="mobile-menu-item"><a href="about.html">About</a></div>
-      <div class="mobile-menu-item"><a href="contactme.html">Contact</a></div>
+<div class="mobile-menu">
+      <div class="nav-link-item"><a href="index.html">Home</a></div>
+      <div class="nav-link-item"><a href="trclayout.html">TRC Layout</a></div>
+      <div class="nav-link-item"><a href="about.html">About</a></div>
+      <div class="nav-link-item"><a href="contactme.html">Contact</a></div>
     </div>
   </div>
 
