@@ -228,6 +228,7 @@ tr:nth-child(odd) {
 
   #header {
     font-size: 1.8em;
+    margin-top: 70px;
   }
 
   #text {
