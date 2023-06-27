@@ -160,6 +160,65 @@
     #footer p {
       margin: 0;
     }
+    /* Styles for desktop */
+@media (min-width: 769px) {
+  .nav-container {
+    padding: 5px;
+  }
+  
+  #about-section {
+    margin-top: 90px;
+    width: 50%;
+  }
+}
+
+/* Styles for mobile */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-link-item {
+    margin-left: 0;
+  }
+
+  .nav-logo,
+  .nav-links {
+    flex-basis: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .nav-link-item a {
+    padding: 10px;
+    display: block;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  #about-section {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  #about-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+
+  #about-section p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+  }
+}
   </style>
 </head>
 
