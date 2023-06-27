@@ -3746,3 +3746,6 @@ function getResult() {
         table.style.display = "none"; // Hide the table when search bar is cleared
     }
 }
+function goToHome() {
+  window.location.href = "contactNumbers.html";
+}
