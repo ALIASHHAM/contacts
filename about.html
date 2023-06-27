@@ -59,31 +59,6 @@
       color: #fff;
     }
 
-    /* Mobile Menu */
-    .mobile-menu-icon {
-      display: none;
-    }
-
-    .mobile-menu-dropdown {
-      display: none;
-      background-color: rgba(255, 255, 255, 0.7);
-      padding: 10px;
-    }
-
-    .mobile-menu-dropdown a {
-      display: block;
-      padding: 10px;
-      border-radius: 5px;
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-    }
-
-    .mobile-menu-dropdown a:hover {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
-    }
-
     /* About Section */
     #about-section {
       background-color: rgba(242, 242, 242, 0.8);
@@ -127,27 +102,54 @@
     #footer p {
       margin: 0;
     }
+/* Mobile Menu */
+    .mobile-menu {
+      display: none;
+    }
 
-    /* Responsive Styles */
+    .mobile-menu-icon {
+      font-size: 25px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .mobile-menu-dropdown {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 150px;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-menu-dropdown-item {
+      margin-top: 5px;
+    }
+
+    .mobile-menu-dropdown-item a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* Show/hide mobile menu dropdown */
+    .mobile-menu.show .mobile-menu-dropdown {
+      display: flex;
+    }
+
+ /* Media Queries */
     @media only screen and (max-width: 768px) {
       .nav-links {
         display: none;
       }
 
-      .mobile-menu-icon {
-        display: block;
-        font-size: 25px;
-        margin-right: 10px;
-        cursor: pointer;
-      }
-
-      .mobile-menu-dropdown.show {
-        display: block;
-      }
-
-      #about-section {
-        width: 80%;
-        margin-top: 170px;
+      .mobile-menu {
+        display: flex;
       }
     }
   </style>
@@ -157,20 +159,20 @@
   <div id="main">
     <div class="nav-container">
       <a class="nav-logo" href="#">Terminal Operations</a>
-      <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
-        &#9776;
-      </div>
       <ul class="nav-links">
         <li class="nav-link-item"><a href="index.html">Home</a></li>
         <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
         <li class="nav-link-item"><a href="about.html">About</a></li>
         <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
       </ul>
-      <div id="mobile-menu-dropdown">
-        <a href="index.html">Home</a>
-        <a href="trclayout.html">TRC Layout</a>
-        <a href="about.html">About</a>
-        <a href="contactme.html">Contact</a>
+      <div class="mobile-menu">
+        <div class="mobile-menu-icon" id="mobile-menu-icon">&#9776;</div>
+        <div class="mobile-menu-dropdown">
+          <div class="mobile-menu-dropdown-item"><a href="index.html">Home</a></div>
+          <div class="mobile-menu-dropdown-item"><a href="trclayout.html">TRC Layout</a></div>
+          <div class="mobile-menu-dropdown-item"><a href="about.html">About</a></div>
+          <div class="mobile-menu-dropdown-item"><a href="contactme.html">Contact</a></div>
+        </div>
       </div>
     </div>
     <div id="about-section">
@@ -184,19 +186,22 @@
     </div>
   </div>
   <script>
-    function toggleMobileMenu() {
-      var dropdownMenu = document.getElementById("mobile-menu-dropdown");
-      dropdownMenu.classList.toggle("show");
-    }
+    // JavaScript code to toggle visibility of mobile menu dropdown
+    document.addEventListener('DOMContentLoaded', function() {
+      var mobileMenuIcon = document.getElementById('mobile-menu-icon');
+      var mobileMenuDropdown = document.querySelector('.mobile-menu-dropdown');
 
-    window.onclick = function(event) {
-      if (!event.target.matches(".mobile-menu-icon")) {
-        var dropdownMenu = document.getElementById("mobile-menu-dropdown");
-        if (dropdownMenu.classList.contains("show")) {
-          dropdownMenu.classList.remove("show");
+      mobileMenuIcon.addEventListener('click', function() {
+        mobileMenuIcon.parentElement.classList.toggle('show');
+      });
+
+      document.addEventListener('click', function(event) {
+        var targetElement = event.target;
+        if (!targetElement.matches('.mobile-menu-icon')) {
+          mobileMenuIcon.parentElement.classList.remove('show');
         }
-      }
-    };
+      });
+    });
   </script>
 </body>
 
