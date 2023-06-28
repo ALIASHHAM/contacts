@@ -9,160 +9,160 @@
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="stylesheet" href="theme.css">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-    }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
 
-    /* Navigation Bar */
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(10px);
-      color: #000;
-      padding: 5px;
-    }
+  /* Navigation Bar */
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    color: #000;
+    padding: 5px;
+  }
 
-    .nav-logo {
-      font-weight: bold;
-      font-size: 25px;
-      text-decoration: none;
-      color: #000;
-    }
+  .nav-logo {
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    color: #000;
+  }
 
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 3;
+    padding: 3;
+  }
+
+  .nav-link-item {
+    margin-left: 10px;
+  }
+
+  .nav-link-item a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .nav-link-item a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+  }
+
+  /* About Section */
+  #about-section {
+    background-color: rgba(242, 242, 242, 0.8);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 90px;
+    width: 50%;
+    font-size: 1em;
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+
+  #about-section h2 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  #about-section p {
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  /* Footer */
+  #footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #717171;
+    font: 0.8em Cambria;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    text-align: center;
+  }
+
+  #footer p {
+    margin: 0;
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    font-size: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .mobile-menu-dropdown {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .mobile-menu-dropdown-item {
+    margin-top: 5px;
+  }
+
+  .mobile-menu-dropdown-item a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+
+  /* Show/hide mobile menu dropdown */
+  .mobile-menu.show .mobile-menu-dropdown {
+    display: flex;
+  }
+
+  /* Media Queries */
+  @media only screen and (max-width: 768px) {
     .nav-links {
-      list-style-type: none;
-      display: flex;
-      align-items: center;
-      margin: 3;
-      padding: 3;
+      display: none;
     }
 
-    .nav-link-item {
-      margin-left: 10px;
-    }
-
-    .nav-link-item a {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-      padding: 15px;
-      border-radius: 5px;
-    }
-
-    .nav-link-item a:hover {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
-    }
-
-    /* About Section */
-    #about-section {
-      background-color: rgba(242, 242, 242, 0.8);
-      backdrop-filter: blur(8px);
-      padding: 20px;
-      text-align: center;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      margin-top: 90px;
-      width: 50%;
-      margin: 0 auto;
-      font-size: 1em;
-      max-width: 500px;
-    }
-
-    #about-section h2 {
-      font-size: 1.5em;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    #about-section p {
-      font-size: 0.9em;
-      color: #333;
-      line-height: 1.5;
-      margin-bottom: 20px;
-    }
-
-    /* Footer */
-    #footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      color: #717171;
-      font: 0.8em Cambria;
-      background: rgba(255, 255, 255, 0.7);
-      padding: 10px;
-      text-align: center;
-    }
-
-    #footer p {
-      margin: 0;
-    }
-
-    /* Mobile Menu */
     .mobile-menu {
-      display: none;
-    }
-
-    .mobile-menu-icon {
-      font-size: 25px;
-      cursor: pointer;
-      margin-right: 10px;
-    }
-
-    .mobile-menu-dropdown {
-      display: none;
-      flex-direction: column;
-      background-color: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(10px);
-      position: absolute;
-      top: 100%;
-      right: 0;
-      width: 150px;
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .mobile-menu-dropdown-item {
-      margin-top: 5px;
-    }
-
-    .mobile-menu-dropdown-item a {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-    }
-
-    /* Show/hide mobile menu dropdown */
-    .mobile-menu.show .mobile-menu-dropdown {
       display: flex;
     }
 
-    /* Media Queries */
-    @media only screen and (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .mobile-menu {
-        display: flex;
-      }
-
-      #about-section {
-        width: 80%;
-        margin-top: 50px;
-        font-size: 0.8em;
-        max-width: 100%;
-      }
+    #about-section {
+      width: 80%;
+      margin-top: 50px;
+      font-size: 0.8em;
+      margin-bottom: 100px;
     }
-  </style>
+  }
+</style>
 </head>
 
 <body>
