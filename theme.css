@@ -598,5 +598,6 @@ tr:nth-child(odd) {
   #search {
     max-width: 300px; /* Adjust the max-width to center the search bar */
     margin: 20px auto; /* Add margin to center the search bar */
+            margin-bottom: 20px;
   }
 }
