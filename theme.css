@@ -547,6 +547,7 @@ tr:nth-child(odd) {
       backdrop-filter: blur(10px);
       position: absolute;
       top: 100%;
+      transform: translateX(-50%);
       right: 0;
       padding: 10px;
       border-radius: 5px;
