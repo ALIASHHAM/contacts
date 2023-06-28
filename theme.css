@@ -217,6 +217,7 @@ tr:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
 }
+
 /* Media Query for screens up to 480px */
 @media only screen and (max-width: 480px) {
   body {
@@ -245,43 +246,70 @@ tr:nth-child(odd) {
     font-size: 0.8em;
   }
 
-  /* Mobile Navigation Menu */
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-  }
+    /* Mobile Menu */
+    .mobile-menu {
+      display: none;
+    }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
+    .mobile-menu-icon {
+      font-size: 25px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
 
-  .nav-links.active {
-    display: flex;
-  }
+    .mobile-menu-dropdown {
+      display: none;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 
-  .nav-link-item {
-    margin: 10px;
-  }
+    .mobile-menu-dropdown-item {
+      margin: 5px;
+    }
 
-  .nav-link-item a {
-    font-size: 1.2em;
-    padding: 10px;
-  }
+    .mobile-menu-dropdown-item a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 0.9em;
+      padding: 5px;
+      border-radius: 5px;
+    }
 
-  .nav-toggle {
-    display: flex;
-    align-items: center;
-    font-size: 1.5em;
-    cursor: pointer;
-  }
+    /* Show/hide mobile menu dropdown */
+    .mobile-menu.show .mobile-menu-dropdown {
+      display: flex;
+    }
 
-  .nav-logo {
-    font-size: 20px;
-    margin: 10px;
-  }
+    /* Media Queries */
+    @media only screen and (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .mobile-menu-icon {
+        font-size: 18px;
+      }
+
+      .mobile-menu-dropdown {
+        width: 100%;
+        font-size: 0.8em;
+      }
 
   /* Search Bar */
   #search {
@@ -289,4 +317,3 @@ tr:nth-child(odd) {
     margin: 20px auto; /* Add margin to center the search bar */
   }
 }
-
