@@ -13,15 +13,24 @@
 
 <body>
     <div id="main">
-        <div class="nav-container">
-            <a class="nav-logo" href="#">Terminal Operations</a>
-            <ul class="nav-links">
-                <li class="nav-link-item"><a href="index.html">Home</a></li>
-                <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
-                <li class="nav-link-item"><a href="about.html">About</a></li>
-                <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
-            </ul>
+<div class="nav-container">
+      <a class="nav-logo" href="#">Terminal Operations</a>
+      <ul class="nav-links">
+        <li class="nav-link-item"><a href="index.html">Home</a></li>
+        <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
+        <li class="nav-link-item"><a href="about.html">About</a></li>
+        <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
+      </ul>
+      <div class="mobile-menu">
+        <div class="mobile-menu-icon" id="mobile-menu-icon">&#9776;<span>Menu</span></div>
+        <div class="mobile-menu-dropdown">
+          <div class="mobile-menu-dropdown-item"><a href="index.html">Home</a></div>
+          <div class="mobile-menu-dropdown-item"><a href="trclayout.html">TRC Layout</a></div>
+          <div class="mobile-menu-dropdown-item"><a href="about.html">About</a></div>
+          <div class="mobile-menu-dropdown-item"><a href="contactme.html">Contact</a></div>
         </div>
+      </div>
+    </div>
 
         <div id="banner">
             <h1 id="header">Airport Contact Numbers</h1>
@@ -56,6 +65,22 @@
                 document.getElementById("text").value = "";
                 getResult(); // Call the search function to update the results after resetting
             }
+    // JavaScript code to toggle visibility of mobile menu dropdown
+    document.addEventListener('DOMContentLoaded', function() {
+      var mobileMenuIcon = document.getElementById('mobile-menu-icon');
+      var mobileMenuDropdown = document.querySelector('.mobile-menu-dropdown');
+
+      mobileMenuIcon.addEventListener('click', function() {
+        mobileMenuIcon.parentElement.classList.toggle('show');
+      });
+
+      document.addEventListener('click', function(event) {
+        var targetElement = event.target;
+        if (!targetElement.matches('.mobile-menu-icon')) {
+          mobileMenuIcon.parentElement.classList.remove('show');
+        }
+      });
+    });
         </script>
     </div>
 </body>
