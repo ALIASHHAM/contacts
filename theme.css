@@ -230,7 +230,7 @@ tr:nth-child(odd) {
 
   #header {
     font-size: 1.8em;
-    margin-top: 80px; /* Add a top margin to push the header below the navigation bar */
+    margin-top: 130px; /* Add a top margin to push the header below the navigation bar */
   }
 
   #text {
