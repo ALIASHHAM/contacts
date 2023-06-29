@@ -265,7 +265,8 @@ tr:nth-child(odd) {
   font-size: 25px;
   text-decoration: none;
   color: #000;
-        font-family: Arial, serif;
+  font-weight: bold;
+  margin-right: 5px;
 }
 
 .nav-links {
@@ -382,6 +383,7 @@ tr:nth-child(odd) {
 
       .mobile-menu-icon {
         font-size: 18px;
+        margin-right: 10px;
       }
 
       .mobile-menu-dropdown {
