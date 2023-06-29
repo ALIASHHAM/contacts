@@ -33,6 +33,7 @@ body {
 
 .show .mobile-menu-dropdown {
     display: block;
+   z-index: 999;
 }
 
 /* Media Query for Mobile Devices */
@@ -398,5 +399,6 @@ tr:nth-child(odd) {
     max-width: 300px; /* Adjust the max-width to center the search bar */
     margin: 20px auto; /* Add margin to center the search bar */
         margin-bottom: 20px;
+    position: relative;
   }
 }
