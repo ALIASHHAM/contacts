@@ -226,10 +226,6 @@ tr:nth-child(odd) {
     background-size: auto;
   }
 
-  #main {
-    padding-bottom: 80px; /* Add padding at the bottom to create space for the keyboard */
-    overflow: auto; /* Enable vertical scrolling */
-    
   #banner {
     display: flex;
     justify-content: space-between;
