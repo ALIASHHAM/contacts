@@ -13,6 +13,7 @@ body {
 
 .mobile-menu-icon {
     cursor: pointer;
+  margin-right: 10px;
 }
 
 .mobile-menu-dropdown {
@@ -60,6 +61,7 @@ body {
 
   .mobile-menu-icon {
     cursor: pointer;
+    margin-right: 10px;
   }
 
   .mobile-menu-dropdown {
