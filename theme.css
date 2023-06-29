@@ -38,14 +38,6 @@ body {
 
 /* Media Query for Mobile Devices */
 @media only screen and (max-width: 768px) {
-  /* Adjust banner styles for mobile */
-  #banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #f9f9f9;
-  }
 
   .nav-logo {
     font-size: 20px;
@@ -302,8 +294,13 @@ tr:nth-child(odd) {
   body {
     background-size: auto;
   }
-
+  
   #banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
     height: 40vh;
   }
 
@@ -325,6 +322,7 @@ tr:nth-child(odd) {
     font-size: 0.8em;
     display: block;
     margin-top: 50px;
+    margin: 20px auto;
   }
 
     /* Mobile Menu */
@@ -403,4 +401,6 @@ tr:nth-child(odd) {
         margin-bottom: 20px;
     position: relative;
   }
+        #search-results + table {
+    margin-top: 50px;
 }
