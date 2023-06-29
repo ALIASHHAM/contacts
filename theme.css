@@ -319,4 +319,38 @@ tr:nth-child(odd) {
     margin: 20px auto; /* Add margin to center the search bar */
             margin-bottom: 20px;
   }
+      /* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    /* Adjust banner styles for mobile */
+    #banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #f9f9f9;
+    }
+
+    .nav-logo {
+        font-size: 20px;
+    }
+
+    /* Adjust mobile menu styles */
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    /* Adjust content styles */
+    #header {
+        font-size: 24px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #search {
+        margin-bottom: 20px;
+    }
 }
