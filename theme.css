@@ -298,13 +298,13 @@ tr:nth-child(odd) {
 }
 
 /* Media Query for screens up to 480px */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   body {
     background-size: auto;
   }
 
   #banner {
-    height: 30vh;
+    height: 40vh;
   }
 
   #header {
@@ -324,7 +324,7 @@ tr:nth-child(odd) {
   table {
     font-size: 0.8em;
     display: block;
-    margin-top: 20px;
+    margin-top: 50px;
   }
 
     /* Mobile Menu */
