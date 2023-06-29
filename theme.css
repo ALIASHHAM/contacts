@@ -323,6 +323,8 @@ tr:nth-child(odd) {
 
   table {
     font-size: 0.8em;
+    display: block;
+    margin-top: 20px;
   }
 
     /* Mobile Menu */
