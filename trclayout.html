@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TRC</title>
+<title>TRC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
   <meta property="og:image" content="via2.jpg">
   <meta property="og:image:alt" content="Airport Contacts">
@@ -18,17 +18,17 @@
     }
 
     h1 {
-  margin-top: 20px;
-  font-size: 2.0em;
-  font-weight: bold;
-  margin-bottom: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
-  padding: 15px;
-  border-radius: 10px;
-  opacity: 0.8;
-  color: #FFF;
-text-align: center;
+      margin-top: 90px;
+      font-size: 2.0em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 8px;
+      opacity: 0.7;
+      color: #FFF;
+      text-align: center;
     }
 
     input[type="text"] {
@@ -130,48 +130,55 @@ text-align: center;
       margin: 0;
     }
 
-/* Navigation Bar */
+    /* Navigation Bar */
 .nav-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
+      font-family: Arial, sans-serif;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
   color: #000;
-  padding: 10px;
-}
+  padding: 5px;
+  font-size: 1.0em;
+    }
 
-.nav-logo {
-  font-weight: bold;
-  font-size: 25px;
-  text-decoration: none;
-  color: #000;
-}
+    .nav-logo {
+      font-weight: bold;
+      font-size: 25px;
+      text-decoration: none;
+      color: #000;
+    }
 
-.nav-links {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  margin: 2;
-  padding: 2;
-}
+    .nav-links {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      margin: 3;
+      padding: 3;
+    }
 
-.nav-link-item {
-  margin-left: 10px;
-}
+    .nav-link-item {
+      margin-left: 10px;
+    }
 
-.nav-link-item a {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  padding: 15px;
-  border-radius: 5px;
-}
+    .nav-link-item a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      padding: 15px;
+      border-radius: 5px;
+    }
 
-.nav-link-item a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-}
+    .nav-link-item a:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+    }
+
     /* Mobile Menu */
     .mobile-menu {
       display: none;
@@ -181,7 +188,6 @@ text-align: center;
       font-size: 25px;
       cursor: pointer;
       margin-right: 10px;
-      font-weight: bold;
     }
 
     .mobile-menu-dropdown {
@@ -201,8 +207,7 @@ text-align: center;
 
     .mobile-menu-dropdown-item {
       margin: 5px;
-              justify-content: center;
-        align-items: center;
+
     }
 
     .mobile-menu-dropdown-item a {
@@ -218,7 +223,6 @@ text-align: center;
     .mobile-menu.show .mobile-menu-dropdown {
       display: flex;
     }
-
     /* Media Queries */
     @media only screen and (max-width: 768px) {
       .nav-links {
@@ -233,30 +237,25 @@ text-align: center;
 
       .mobile-menu-icon {
         font-size: 18px;
-        font-weight: bold;
       }
 
       .mobile-menu-dropdown {
         width: 100%;
         font-size: 0.8em;
-                justify-content: center;
-        align-items: center;
       }
-/* Media Queries */
-    @media only screen and (max-width: 768px) {
       h1 {
         margin-top: 60px;
-        font-size: 1.4em;
+        font-size: 1.3em;
       }
 
       input[type="text"] {
         font-size: 14px;
-        padding: 14px;
+        padding: 12px;
       }
 
       .seat {
         font-size: 10px;
-        padding: 15px;
+        padding: 20px;
       }
 
       .seat-number {
@@ -271,18 +270,14 @@ text-align: center;
         height: 300px;
       }
 
-      .nav-logo {
-        font-size: 18px;
-      }
 
-      .nav-link-item a {
-        padding: 8px;
-      }
-    }
+}
+
   </style>
   <script src="seating.js"></script>
 </head>
 <body>
+<div id="main">
 <div class="nav-container">
       <a class="nav-logo" href="#">Terminal Operations</a>
       <ul class="nav-links">
