@@ -14,7 +14,9 @@
 <body>
     <div id="main">
 <div class="nav-container">
-      <a class="nav-logo" href="#">Terminal Operations</a>
+      <a class="nav-logo" href="#">
+  <img src="logo.jpg"class=" logo-image">
+</a>
       <ul class="nav-links">
         <li class="nav-link-item"><a href="index.html">Home</a></li>
         <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
@@ -61,28 +63,30 @@
 
         <script src="include2.js"></script>
 </div>
- <script>
-            function resetSearch() {
-                document.getElementById("text").value = "";
-                getResult(); // Call the search function to update the results after resetting
-            }
-    // JavaScript code to toggle visibility of mobile menu dropdown
-    document.addEventListener('DOMContentLoaded', function() {
-      var mobileMenuIcon = document.getElementById('mobile-menu-icon');
-      var mobileMenuDropdown = document.querySelector('.mobile-menu-dropdown');
+<script>
+  function resetSearch() {
+    document.getElementById("text").value = "";
+    getResult(); // Call the search function to update the results after resetting
+  }
 
-      mobileMenuIcon.addEventListener('click', function() {
-        mobileMenuIcon.parentElement.classList.toggle('show');
-      });
+  // JavaScript code to toggle visibility of mobile menu dropdown
+  document.addEventListener('DOMContentLoaded', function() {
+    var mobileMenuIcon = document.getElementById('mobile-menu-icon');
+    var mobileMenuDropdown = document.querySelector('.mobile-menu-dropdown');
 
-      document.addEventListener('click', function(event) {
-        var targetElement = event.target;
-        if (!targetElement.matches('.mobile-menu-icon')) {
-          mobileMenuIcon.parentElement.classList.remove('show');
-        }
-      });
+    mobileMenuIcon.addEventListener('click', function() {
+      mobileMenuIcon.parentElement.classList.toggle('show');
     });
-        </script>
+
+    document.addEventListener('click', function(event) {
+      var targetElement = event.target;
+      if (!targetElement.matches('.mobile-menu-icon')) {
+        mobileMenuIcon.parentElement.classList.remove('show');
+      }
+    });
+  });
+
+</script>
   
 </body>
 
