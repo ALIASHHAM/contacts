@@ -274,8 +274,18 @@ tr:nth-child(odd) {
   pointer-events: none;
   z-index: -1;
 }
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
 
-
+.logo-image {
+  width: 110px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add spacing if necessary */
+}
     /* Mobile Menu */
     .mobile-menu {
       display: none;
