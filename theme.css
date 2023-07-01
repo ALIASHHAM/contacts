@@ -269,7 +269,9 @@ tr:nth-child(odd) {
   }
 
   #search {
-    margin: 10px auto;
+    margin: 10px;
+    justify-content: center;
+      padding: 20px;
   }
 
   #text {
