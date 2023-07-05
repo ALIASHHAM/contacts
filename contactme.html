@@ -407,7 +407,7 @@ body {
 <div class="container">
   <div id="contact-me">
     <h2>Contact Me</h2>
-<form id="contact-form" action="send_email.php" method="POST">
+<form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeUb-W1SyUZujTgE-baYJdkwEdzc7Ba0fM5uEcwl9nnhGeR_A/viewform?usp=pp_url" method="POST">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -422,24 +422,7 @@ body {
         <label for="message">Message</label>
         <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
       </div>
-      <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-    
-    $to = support@airportcontacts.com; // Replace with your domain email address
-    $subject = 'New Contact Form Submission';
-    $message = "Name: $name\nEmail: $email\n\n$message";
-    $headers = "From: $email";
-    
-    if (mail($to, $subject, $message, $headers)) {
-        echo 'Email sent successfully.';
-    } else {
-        echo 'Failed to send email.';
-    }
-}
-?>
+
       <button type="submit">Submit</button>
     </form>
   </div>
