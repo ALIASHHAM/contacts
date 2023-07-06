@@ -246,54 +246,61 @@
       animation: fadeSlideIn 1s ease-in-out 0.5s 0.5s forwards; /* Delay the animation and keep the final state */
     }
 
-/* Media Queries */
-@media only screen and (max-width: 768px) {
-  #header {
-    font-size: 1.2em;
-  }
+    /* Media Queries */
+    @media only screen and (max-width: 768px) {
+      #header {
+        font-size: 1.4em;
+      }
 
-  #about-section {
-    width: 80%;
-    font-size: 0.8em;
-    margin-top: 40%;
-  }
+      #about-section {
+        width: 65%;
+        font-size: 0.7em;
+        margin-top: 110px;
+      }
 
-  #about-section a {
-    padding: 25px 46px;
-  }
-}
+      #about-section a {
+        padding: 15px 36px;
+      }
+    }
 
-@media only screen and (max-width: 480px) {
-  #header {
-    font-size: 0.9em;
-  }
+    @media only screen and (max-width: 480px) {
+      #header {
+        font-size: 1.4em;
+        position: fixed; /* Fix the header at the top of the screen */
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+      }
 
-  #about-section {
-    width: 75%;
-    font-size: 0.7em;
-    margin-top: 35%;
-  }
+      #about-section {
+        width: 90%;
+        font-size: 0.9em;
+        margin-top: 110px;
+      }
 
-  #about-section a {
-    padding: 20px 45px;
-  }
-}
+      #about-section a {
+        padding: 15px 36px;
+      }
+    }
 
     @media only screen and (max-width: 360px) {
-  #header {
-    font-size: 0.6em;
-  }
+      #header {
+        font-size: 1.2em;
+      }
 
-  #about-section {
-    width: 90%;
-    font-size: 0.7em;
-    margin-top: 30%;
-  }
+      #about-section {
+        width: 90%;
+        font-size: 0.8em;
+        margin-top: 110px;
+      }
 
-  #about-section a {
-    padding: 15px 30px;
-  }
-}
+      #about-section a {
+        padding: 15px 30px;
+      }
+    }
 
   </style>
 </head>
