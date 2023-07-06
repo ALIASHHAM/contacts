@@ -3,7 +3,7 @@
 
 <head>
   <title>Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
   <meta property="og:image" content="via2.jpg">
   <meta property="og:image:alt" content="Airport Contacts">
   <link rel="shortcut icon" href="favicon.ico" />
@@ -248,14 +248,15 @@
 
     /* Media Queries */
     @media only screen and (max-width: 768px) {
-      #header {
-        font-size: 1.4em;
-      }
+   #header {
+    font-size: 1.2em;
+    margin-top: -30px;
+    }
 
       #about-section {
-        width: 65%;
+        width: 70%;
         font-size: 0.7em;
-        margin-top: 110px;
+        margin-top: 25%;
       }
 
       #about-section a {
@@ -264,21 +265,16 @@
     }
 
     @media only screen and (max-width: 480px) {
-      #header {
-        font-size: 1.4em;
-        position: fixed; /* Fix the header at the top of the screen */
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 999;
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 10px;
-      }
+  #header {
+    font-size: 1.0em;
+    margin-top: -30px;
+    }
+
 
       #about-section {
-        width: 90%;
-        font-size: 0.9em;
-        margin-top: 110px;
+        width: 65%;
+        font-size: 0.7em;
+        margin-top: 25%;
       }
 
       #about-section a {
@@ -287,15 +283,18 @@
     }
 
     @media only screen and (max-width: 360px) {
-      #header {
-        font-size: 1.2em;
-      }
+    #header {
+      font-size: 0.9em;
+     margin-top: -30px;
+    }
 
       #about-section {
-        width: 90%;
-        font-size: 0.8em;
-        margin-top: 110px;
+        width: 70%;
+        font-size: 0.7em;
+        margin-top: 25%px;
       }
+  body {
+    background-position: center center;
 
       #about-section a {
         padding: 15px 30px;
