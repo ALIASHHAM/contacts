@@ -364,6 +364,8 @@ input[type="text"]:focus::placeholder {
     }
 
     .seat {
+    width: 50%;
+    height: 75px;
       font-size: 10px;
       padding: 5px;
 margin-top: 20px;
@@ -404,8 +406,8 @@ margin-top: 20px;
   }
 
   .seat {
-    width: 65%;
-    height: 80px;
+    width: 50%;
+    height: 75px;
     font-size: 8px;
     padding: 2px;
     margin-top: 10px;
@@ -455,8 +457,8 @@ margin-top: 20px;
 
 @media (max-width: 360px) {
   .seat {
-    width: 90%;
-    height: 80px;
+    width: 50%;
+    height: 60px;
     font-size: 8px;
     margin: 5px 0;
   }
@@ -473,6 +475,102 @@ margin-top: 20px;
   .seat-names {
     font-size: 9px;
     margin-top: 5px;
+  }
+}
+
+/* Add animation to the navigation bar */
+.nav-container {
+  animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Add animation to the header */
+#header {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Add animation to the content */
+#seating-plan {
+  animation: slideUp 1s ease-in-out;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Add animation to the navigation bar */
+@media (min-width: 768px) {
+  .nav-container {
+    animation: slideDown 1s ease-in-out;
+  }
+
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+/* Add animation to the header */
+@media (min-width: 768px) {
+  #header {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+/* Add animation to the content */
+#seating-plan {
+  animation: slideUp 1s ease-in-out;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
