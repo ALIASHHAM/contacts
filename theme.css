@@ -341,7 +341,7 @@ tr:nth-child(odd) {
 
   #search {
     margin: 10px auto;
-   width: 50%;
+   width: 55%;
     
   }
 
@@ -351,7 +351,7 @@ tr:nth-child(odd) {
   }
 
   #text {
-    font-size: 1.1em;
+    font-size: 1.0em;
   }   
 
   .nav-links {
