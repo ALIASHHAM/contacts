@@ -1,353 +1,336 @@
 <!DOCTYPE html>
-<html> 
-
+<html>
 <head>
-<title> - Airport Contact Numbers - </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-<meta property="og:image" content="via.jpg">
-    <meta property="og:image:alt" content="Terminal Operations">
-<meta property="og:url" content="https://www.airportcontacts.com">
-    <link rel="shortcut icon" href="favicon.ico" /> 
+  <title>Airport Contact Numbers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <meta property="og:image" content="via.jpg">
+  <meta property="og:image:alt" content="Terminal Operations">
+  <meta property="og:url" content="https://www.airportcontacts.com">
+  <link rel="shortcut icon" href="favicon.ico" />
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"> 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Francois+One&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Francois+One&display=swap">
 
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #50e0ff;
+      overflow: hidden;
+      background-image: url("Male.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #50e0ff;
-      overflow: hidden; /* Prevent background image from overflowing */
-      background-image: url("Male.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: top center;
-    } 
+    #header {
+      font-family: 'Lobster', cursive;
+      font-size: 2.5em;
+      margin-top: -80px;
+      margin-left: 10px;
+      color: #333;
+      animation: slideDown 1s forwards;
+      text-shadow: 2px 2px 4px #000033;
+      -webkit-text-stroke: 1px #000033;
+      -webkit-text-fill-color: transparent;
+    }
 
-    #header {
-      font-family: 'Lobster', cursive; /* Applied the 'Pacifico' font to the header */
-      font-size: 2.5em;
-      margin-top: -80px; /* Initial position above the viewport */
-margin-left: 10px;
-      color: #333;
-      animation: slideDown 1s forwards; /* Slide down animation */
-text-shadow: 2px 2px 4px #000033; /* Add a dark blue text shadow */
-  -webkit-text-stroke: 1px #000033; /* Add a very dark blue text stroke */
-  -webkit-text-fill-color: transparent; /* Make the text transparent */
-    } 
+    @keyframes slideDown {
+      0% {
+        margin-top: -100px;
+      }
+      100% {
+        margin-top: 20px;
+      }
+    }
 
-    @keyframes slideDown {
-      0% {
-        margin-top: -100px;
-      }
-      100% {
-        margin-top: 20px; /* Final position */
-      }
-    } 
+    #slideshow-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image: url("1.jpg");
+      background-size: cover;
+      transition: background-image 10s linear;
+      animation: fadeIn 2s forwards;
+    }
 
-    /* Background Slideshow */
-    #slideshow-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background-image: url("1.jpg"); /* Set initial background image */
-      background-size: cover;
-      transition: background-image 10s linear; /* Adjust the transition duration as needed */
-      animation: fadeIn 2s forwards; /* Fade-in animation */
-    } 
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
 
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    } 
+    @keyframes slideBackground {
+      0% {
+        background-image: url("1.jpg");
+      }
+      25% {
+        background-image: url("2.jpg");
+      }
+      50% {
+        background-image: url("3.jpg");
+      }
+      75% {
+        background-image: url("4.jpg");
+      }
+      100% {
+        background-image: url("1.jpg");
+      }
+    }
 
-    @keyframes slideBackground {
-      0% {
-        background-image: url("1.jpg");
-      }
-      25% {
-        background-image: url("2.jpg");
-      }
-      50% {
-        background-image: url("3.jpg");
-      }
-      75% {
-        background-image: url("4.jpg");
-      }
-      100% {
-        background-image: url("1.jpg");
-      }
-    } 
+    #slideshow-container {
+      animation: slideBackground 40s infinite;
+    }
 
-    /* Start the animation */
-    #slideshow-container {
-      animation: slideBackground 40s infinite; /* Adjust the animation duration as needed */
-    } 
+    #main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 65vh;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 1s;
+    }
 
-    /* About Section */
-    #main {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 65vh;
-      opacity: 0; /* Initially hidden */
-      animation: fadeIn 1s forwards; /* Fade-in animation */
-      animation-delay: 1s; /* Delay animation for 1 second */
-    } 
+    #about-section {
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      width: 50%;
+      max-width: 100%;
+      margin-bottom: 50px;
+      position:relative;
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+      opacity: 0.9;
+      transform: translateY(-50px);
+      animation: slideIn 1s forwards;
+    }
 
-    #about-section {
-      background-color: rgba(255, 255, 255, 0.4); /* Adjust the opacity to make it more transparent */
-      padding: 20px;
-      text-align: center;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      width: 50%;
-      max-width: 100%;
-      margin-bottom: 50px;
-      position:relative;
-      backdrop-filter: blur(10px);
-      overflow: hidden;
-      opacity: 0.9; /* Adjust the opacity as needed */
-      transform: translateY(-50px); /* Initial position above the viewport */
-      animation: slideIn 1s forwards; /* Slide in animation */
-    } 
+    @keyframes slideIn {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
 
-    @keyframes slideIn {
-      0% {
-        transform: translateY(-50px);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    } 
+    #about-section::before {
+      content: "";
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      pointer-events: none;
+      border-radius: 10px;
+      opacity: 0.9;
+    }
 
-    #about-section::before {
-      content: "";
-      background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%); /* Adjust the opacity ofthe linear gradient */
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-      pointer-events: none;
-      border-radius: 10px;
-      opacity: 0.9; /* Adjust the opacity as needed */
-    } 
+    #about-section h2 {
+      font-size: 1.8em;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      color: #333;
+      font-weight: bold;
+      font-family: 'Lobster', cursive;
+    }
 
-#about-section h2 {
-  font-size: 1.8em;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  color: #333;
-  font-weight: bold;
-  font-family: 'Lobster', cursive;
+    #about-section p {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
 
-}
+    #header h1 {
+      font-size: 2.5em;
+    }
 
+    #header h1 span {
+      font-family: "Arial", sans-serif;
+    }
 
-    #about-section p {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #333;
-      line-height: 1.5;
-      margin-bottom: 20px;
-    } 
+    #about-section a {
+      display: inline-block;
+      padding: 18px 45px;
+      background: radial-gradient(circle, #0000FF, #000080);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background 0.3s;
+      position: relative;
+      overflow: hidden;
+      font-weight: bold;
+      font-family: 'Francois One', sans-serif;
+      margin-top: 30px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 
-    #header h1 {
-      font-size: 2.5em;
-    } 
+    #about-section a::before {
+      content: "\2192";
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      font-size: 1.2em;
+      line-height: 1;
+      color: #fff;
+    }
 
-    #header h1 span {
-      font-family: "Arial", sans-serif;
-    } 
+    #about-section a::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.3);
+      transition: right 0.3s;
+    }
 
-/* Search Button */
-#about-section a {
-  display: inline-block;
-  padding: 18px 45px; /* Adjust the padding to increase the button size */
-  background: radial-gradient(circle, #0000FF, #000080); /* Blue radiant background */
-  color: #fff;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: background 0.3s;
-  position: relative;
-  overflow: hidden;
-  font-weight: bold;
-  font-family: 'Francois One', sans-serif;
-  margin-top: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a box shadow to improve visibility */
-} 
+    #about-section a:hover::after {
+      right: 0;
+    }
 
-#about-section a::before {
-  content: "\2192";
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
-  font-size: 1.2em;
-  line-height: 1;
-  color: #fff;
-} 
+    #about-section a:hover {
+      background: radial-gradient(circle, #00FFFF, #0000FF);
+    }
 
-#about-section a::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 100%;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.3);
-  transition: right 0.3s;
-} 
+    #footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      color: #717171;
+      font: 0.8em Cambria;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 10px;
+      text-align: center;
+    }
 
-#about-section a:hover::after {
-  right: 0;
-} 
+    #footer p {
+      margin: 0;
+    }
 
-#about-section a:hover {
-  background: radial-gradient(circle, #00FFFF, #0000FF); /* Update the gradient colors on hover */
-}
+    @keyframes fadeSlideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
+    #header {
+      animation: fadeSlideIn 1s ease-in-out;
+    }
 
-    /* Footer */
-    #footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      color: #717171;
-      font: 0.8em Cambria;
-      background: rgba(255, 255, 255, 0.7);
-      padding: 10px;
-      text-align: center;
-    } 
+    #about-section {
+      animation: fadeSlideIn 1s ease-in-out 0.5s 0.5s forwards;
+    }
 
-    #footer p {
-      margin: 0;
-    } 
+    @media only screen and (max-width: 768px) {
+      #header {
+        font-size: 1.1em;
+        margin-top: -20px;
+        margin-left: 5px;
+      }
 
-    /* Animation for Page Load */
-    @keyframes fadeSlideIn {
-      0% {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    } 
+      #about-section {
+        width: 75%;
+        font-size: 0.7em;
+        margin-top: 25%;
+      }
 
-    /* Apply Animation to Elements */
-    #header {
-      animation: fadeSlideIn 1s ease-in-out;
-    } 
+      #about-section a {
+        padding: 15px 36px;
+```html
+        padding: 15px 36px;
+      }
+    }
 
-    #about-section {
-      animation: fadeSlideIn 1s ease-in-out 0.5s 0.5s forwards; /* Delay the animation and keep the final state */
-    } 
+    @media only screen and (max-width: 480px) {
+      #header {
+        font-size: 0.9em;
+        margin-top: -20px;
+        margin-left: 5px;
+      }
 
-    /* Media Queries */
-    @media only screen and (max-width: 768px) {
-   #header {
-    font-size: 1.1em;
-    margin-top: -20px;
-margin-left: 5px;
-    } 
+      #about-section {
+        width: 75%;
+        font-size: 0.7em;
+        margin-top: 25%;
+      }
 
-      #about-section {
-        width: 75%;
-        font-size: 0.7em;
-        margin-top: 25%;
-      } 
+      #about-section a {
+        padding: 15px 36px;
+      }
+    }
 
-      #about-section a {
-        padding: 15px 36px;
-      }
-    } 
+    @media only screen and (max-width: 360px) {
+      #header {
+        font-size: 0.7em;
+        margin-top: -20px;
+        margin-left: 5px;
+      }
 
-    @media only screen and (max-width: 480px) {
-  #header {
-    font-size: 0.9em;
-    margin-top: -20px;
-margin-left: 5px;
-    }
-
-
-      #about-section {
-        width: 75%;
-        font-size: 0.7em;
-        margin-top: 25%;
-      } 
-
-      #about-section a {
-        padding: 15px 36px;
-      }
-    } 
-
-    @media only screen and (max-width: 360px) {
-    #header {
-      font-size: 0.7em;
-     margin-top: -20px;
-margin-left: 5px;
-    } 
-
-      #about-section {
-        width: 75%;
-        font-size: 0.7em;
-        margin-top: 25%px;
-      }
-  body {
-    background-position: center center; 
-
-      #about-section a {
-        padding: 15px 30px;
-      }
-    } 
-
-  </style>
-</head> 
+      #about-section {
+        width: 75%;
+        font-size: 0.7em;
+        margin-top: 25%;
+      }
+    }
+  </style>
+</head>
 
 <body>
-  <div id="header">
-    <h1>Terminal Operations</h1>
-  </div>
-  <div id="slideshow-container"></div>
-  <div id="main">
-    <div id="about-section">
-      <h2>Welcome!</h2>
-      <p>This webpage contains important contact information for numerous entities involved in terminal operations. It includes contact information for TS staffs, Internal numbers, Airline, Resorts, Representatives, and Guesthouses.</p>
-      <p>Furthermore, this webpage also includes the layout and counter numbers for the resorts located in the TRC (Tourist Representative Counter Area). The aim is to facilitate efficient communication and coordination within the terminal operations environment, assuring smooth interactions and assistance for visitors, guests, and staff members alike.</p>
-      <p>Thank you!</p> 
+  <div id="header">
+    <h1>Terminal Operations</h1>
+  </div>
+  <div id="slideshow-container"></div>
+  <div id="main">
+    <div id="about-section">
+      <h2>Welcome!</h2>
+      <p>This webpage contains important contact information for numerous entities involved in terminal operations. It includes contact information for TS staffs, Internal numbers, Airline, Resorts, Representatives, and Guesthouses.</p>
+      <p>Furthermore, this webpage also includes the layout and counter numbers for the resorts located in the TRC (Tourist Representative Counter Area). The aim is to facilitate efficient communication and coordination within the terminal operations environment, assuring smooth interactions and assistance for visitors, guests, and staff members alike.</p>
+      <p>Thank you!</p>
 
-      <a href="search.html">Go to Search Page</a>
-    </div> 
+      <a href="search.html">Go to Search Page</a>
+    </div>
 
-    <div id="footer">
-      <p>Terminal Operations &copy; 2023. Ali Ashham</p>
-    </div>
-  </div> 
+    <div id="footer">
+      <p>TerminalOperations | Contact: support@airportcontacts.com | © 2023 Ali Ashham. All rights reserved.</p>
 
-  <script>
-    // JavaScript for fading in the About section on page load
-    window.addEventListener("DOMContentLoaded", function () {
-      const aboutSection = document.getElementById("about-section");
-      aboutSection.style.opacity = "1";
-      aboutSection.style.transform = "translateY(0)";
-    });
-  </script>
-</body> 
+    </div>
+  </div>
 
+  <script>
+    // JavaScript for fading in the About section on page load
+    window.addEventListener("DOMContentLoaded", function () {
+      const aboutSection = document.getElementById("about-section");
+      aboutSection.style.opacity = "1";
+      aboutSection.style.transform = "translateY(0)";
+    });
+  </script>
+</body>
 </html>
+
+    
