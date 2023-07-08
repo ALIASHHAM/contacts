@@ -166,50 +166,64 @@
       font-family: "Arial", sans-serif;
     }
 
-    #about-section a {
-      display: inline-block;
-      padding: 18px 45px;
+  #about-section a {
+    display: inline-block;
+    padding: 18px 45px;
+    background: radial-gradient(circle, #0000FF, #000080);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    font-family: 'Francois One', sans-serif;
+    margin-top: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: glowBackground 2s infinite alternate;
+  }
+
+  #about-section a::before {
+    content: "\2192";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    line-height: 1;
+    color: #fff;
+  }
+
+  #about-section a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: right 0.3s;
+  }
+
+  #about-section a:hover::after {
+    right: 0;
+  }
+
+  #about-section a:hover {
+    animation: glowBackground 0.5s infinite alternate;
+  }
+
+  @keyframes glowBackground {
+    0% {
       background: radial-gradient(circle, #0000FF, #000080);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 30px;
-      transition: background 0.3s;
-      position: relative;
-      overflow: hidden;
-      font-weight: bold;
-      font-family: 'Francois One', sans-serif;
-      margin-top: 30px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
-
-    #about-section a::before {
-      content: "\2192";
-      position: absolute;
-      top: 50%;
-      right: 15px;
-      transform: translateY(-50%);
-      font-size: 1.2em;
-      line-height: 1;
-      color: #fff;
-    }
-
-    #about-section a::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 100%;
-      bottom: 0;
-      background-color: rgba(255, 255, 255, 0.3);
-      transition: right 0.3s;
-    }
-
-    #about-section a:hover::after {
-      right: 0;
-    }
-
-    #about-section a:hover {
+    50% {
       background: radial-gradient(circle, #00FFFF, #0000FF);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+      background: radial-gradient(circle, #0000FF, #000080);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
 
     #footer {
@@ -263,7 +277,6 @@
 
       #about-section a {
         padding: 15px 36px;
-```html
         padding: 15px 36px;
       }
     }
