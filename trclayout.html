@@ -27,7 +27,6 @@
 #header {
   position: relative;
   font-size: 2em;
-
   margin: 20px auto;
   padding: 20px;
   border-radius: 8px;
@@ -37,12 +36,12 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s;
   cursor: pointer;
-  color: white; /* Set a brighter text color */
+  color: white;
   mix-blend-mode: overlay;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adjust the text shadow for better visibility */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   margin-top: 150px;
   max-width: 600px;
-font-family: 'Rampart One', cursive;
+  font-family: 'Poppins', sans-serif; /* Alternate font */
 }
 
 #header:hover {
@@ -66,7 +65,6 @@ font-family: 'Rampart One', cursive;
 #header:hover::before {
   opacity: 0.2;
 }
-
 
     
 input[type="text"] {
@@ -192,21 +190,24 @@ input[type="text"]:focus::placeholder {
 
 }
 
-  #Footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: #717171;
-    font: 0.8em Cambria;
-    background: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    text-align: center;
-  }
+#Footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #717171;
+  font: 0.8em Cambria;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box; /* Add this line */
+  font-family: 'Roboto', sans-serif; /* Updated font */
+}
 
-  #Footer p {
-    margin: 0;
-  }
+#Footer p {
+  margin: 0;
+  font-size: 0.8em; /* Adjust the font size as needed */
+}
 
 /* Navigation Bar */
 .nav-container {
@@ -389,7 +390,12 @@ margin-top: 20px;
     .pdf-embed {
       height: 300px;
     }
+    #Footer {
+    position: static;
+    margin-top: 20px; /* Add some margin to separate it from the content */
+    font-size: 0.7em; /* Adjust the font size as needed */
   }
+}
 @media only screen and (max-width: 480px) {
   body {
     background-size: auto;
@@ -460,8 +466,12 @@ margin-top: 20px;
     margin-top: 40px;
     font-size: 1.2em;
   }
+  #Footer {
+    position: static;
+    margin-top: 20px; /* Add some margin to separate it from the content */
+    font-size: 0.7em; /* Adjust the font size as needed */
+  }
 }
-
 @media (max-width: 360px) {
   .seat {
     width: 50%;
@@ -483,8 +493,12 @@ margin-top: 20px;
     font-size: 9px;
     margin-top: 5px;
   }
+  #Footer {
+    position: static;
+    margin-top: 20px; /* Add some margin to separate it from the content */
+    font-size: 0.7em; /* Adjust the font size as needed */
+  }
 }
-
 /* Add animation to the navigation bar */
 .nav-container {
   animation: slideDown 1s ease-in-out;
@@ -617,7 +631,7 @@ margin-top: 20px;
     <embed src="trc.pdf" class="pdf-embed" type="application/pdf" />
   </div>
   <div id="Footer">
-    <p>Terminal Operations &copy; 2023. Ali Ashham</p>
+       <p>Contact: support@airportcontacts.com | Terminal Operations © 2023 Ali Ashham.<p>
   </div>
 </div>
 
