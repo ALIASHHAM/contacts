@@ -312,7 +312,9 @@ body {
   
   #contact-me {
     padding: 20px;
-  }
+  margin-bottom: 120px; /* Add margin to create space for the contact form to shift */
+      }
+ 
   
   #contact-me h2 {
     font-size: 1.8em;
@@ -333,7 +335,10 @@ body {
     background-repeat: no-repeat;
     background-position: center;
   }
-}
+    #contact-form.keyboard-open {
+        transform: translateY(-100px); /* Adjust the translation as needed */
+      }
+    }
 
 /* Media Query for 480px */
 @media only screen and (max-width: 480px) {
@@ -399,7 +404,10 @@ body {
     background-repeat: no-repeat;
     background-position: center;
   }
-
+    #contact-form.keyboard-open {
+        transform: translateY(-100px); /* Adjust the translation as needed */
+      }
+    }
  /* Underline Style for Nav Links */
   .nav-link-item a {
     text-decoration: none;
@@ -484,7 +492,6 @@ body {
     transform: translateY(0);
     opacity: 1;
   }
-}
 }
 
 /* Add animation to the header */
@@ -572,7 +579,8 @@ body {
       </div>
     </div>
     <div id="Footer">
-      <p>Contact: support@airportcontacts.com | Terminal Operations © 2023 Ali Ashham.<p>
+        <p>Contact: support@airportcontacts.com<p>
+<p>Terminal Operations © 2023 Ali Ashham.<p>
     </div>
   </div>
   <script>
@@ -592,22 +600,21 @@ body {
           mobileMenuIcon.parentElement.classList.remove('show');
         }
       });
+    document.addEventListener('DOMContentLoaded', function() {
+      var contactForm = document.getElementById('contact-me');
+
       // Adjust contact form position on mobile keyboard open/close
       window.addEventListener('resize', function() {
-        var contactForm = document.getElementById('contact-me');
         var windowHeight = window.innerHeight;
+        var formOffsetTop = contactForm.getBoundingClientRect().top;
 
-        contactForm.style.transform = 'translateY(0)';
-
-        if (window.innerHeight < windowHeight) {
-          var formOffsetTop = contactForm.getBoundingClientRect().top;
-
-          if (formOffsetTop < 0) {
-            contactForm.style.transform = 'translateY(' + formOffsetTop + 'px)';
-          }
+        if (window.innerHeight < windowHeight && formOffsetTop < 0) {
+          contactForm.classList.add('keyboard-open');
+        } else {
+          contactForm.classList.remove('keyboard-open');
         }
       });
-    });
+    })
   </script>
 </body>
 
