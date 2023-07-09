@@ -10,436 +10,511 @@
   <link rel="shortcut icon" href="favicon.ico" />
 
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #f2f2f2;
-      background-image: url("4.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: top center;
-      background-attachment: fixed;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  overflow: hidden; /* Prevent background image from overflowing */
+  background-image: url("4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
 
-    /* Navigation Bar */
-    .nav-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: rgba(255, 255, 255, 0.9);
-      color: #000;
-      padding: 20px;
-      border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(10px);
-      z-index: 9999;
-    }
+/* Navigation Bar */
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  padding: 20px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
 
-    .nav-logo {
-      font-weight: bold;
-      font-size: 24px;
-      text-decoration: none;
-      color: #000;
-    }
+}
+.nav-logo {
+  font-weight: bold;
+  font-size: 24px;
+  text-decoration: none;
+  color: #000;
+}
 
-    .nav-links {
-      list-style-type: none;
-      display: flex;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-    }
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
 
-    .nav-link-item {
-      margin-left: 15px;
-    }
+.nav-link-item {
+  margin-left: 15px;
+}
 
-    .nav-link-item a {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-      padding: 10px;
-      position: relative;
-    }
+.nav-link-item a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding: 10px;
+  position: relative;
 
-    .nav-link-item a::after {
-      content: "";
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: #000;
-      opacity: 0;
-      transition: opacity 0.3s, transform 0.3s;
-      transform: scaleX(0);
-    }
+}
 
-    .nav-link-item a:hover::after {
-      opacity: 1;
-      transform: scaleX(1);
-    }
+.nav-link-item a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: scaleX(0);
 
-    .nav-container:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
-      pointer-events: none;
-      z-index: -1;
-    }
+}
 
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: #000;
-    }
 
-    .logo-image {
-      width: 110px;
-      height: auto;
-      margin-right: 10px;
-    }
+.nav-link-item a:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
 
-    .container {
-      width: 100%;
-      max-width: 500px;
-      margin: 0 auto;
-      padding: 20px;
-      margin-top: 90px;
-      flex-wrap: wrap;
-    }
+.nav-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
 
-    #contact-me {
-      background-color: rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(10px);
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      padding: 40px;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 500px;
-      width: 90%;
-    }
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
 
-    #contact-me h2 {
-      font-size: 2em;
-      margin-top: 0;
-      margin-bottom: 20px;
-      color: #0070FF;
-      text-transform: uppercase;
-    }
+.logo-image {
+  width: 110px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add spacing if necessary */
+}
 
-    #contact-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 90px;
+flex-wrap: wrap;
 
-    #contact-form .form-group {
-      margin-bottom: 20px;
-      width: 100%;
-    }
+}
 
-    #contact-form label {
-      font-weight: bold;
-      margin-bottom: 8px;
-      color: #333;
-    }
+#contact-me {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
 
-    #contact-form input,
-    #contact-form textarea {
-      width: 100%;
-      padding: 12px;
-      border: none;
-      border-radius: 5px;
-      background-color: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+#contact-me h2 {
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #0070FF;
+  text-transform: uppercase;
+}
 
-    #contact-form textarea {
-      resize: vertical;
-    }
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    #contact-form button[type="submit"] {
-      background-color: rgba(0, 112, 255, 0.7);
-      color: #FFF;
-      font-weight: bold;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
+#contact-form .form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
 
-    #contact-form button[type="submit"]::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
-      transition: left 0.3s;
-    }
+#contact-form label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
 
-    #contact-form button[type="submit"]:hover {
-      background-color: rgba(0, 38, 255, 0.9);
-    }
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-    #contact-form button[type="submit"]:hover::before {
-      left: 100%;
-    }
+#contact-form textarea {
+  resize: vertical;
+}
 
-    /* Additional Styling */
-    #contact-form input:focus,
-    #contact-form textarea:focus {
-      outline: none;
-      border: 1px solid #0070FF;
-    }
+#contact-form button[type="submit"] {
+  background-color: rgba(0, 112, 255, 0.7);
+  color: #FFF;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
 
-    #contact-form button[type="submit"]:focus {
-      outline: none;
-    }
+#contact-form button[type="submit"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+  transition: left 0.3s;
+}
 
-    #Footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      color: #717171;
-      font: 0.8em Cambria;
-      background: rgba(255, 255, 255, 0.7);
-      padding: 10px;
-      text-align: center;
-    }
+#contact-form button[type="submit"]:hover {
+  background-color: rgba(0, 38, 255, 0.9);
+}
 
-    #Footer p {
-      margin: 0;
-    }
+#contact-form button[type="submit"]:hover::before {
+  left: 100%;
+}
 
-    /* Mobile Menu */
-    .mobile-menu {
-      display: none;
-    }
+/* Additional Styling */
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #0070FF;
+}
 
-    .mobile-menu-icon {
-      font-size: 25px;
-      cursor: pointer;
-      margin-right: 10px;
-    }
+#contact-form button[type="submit"]:focus {
+  outline: none;
+}
 
-    .mobile-menu-dropdown {
-      display: none;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      background-color: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(10px);
-      position: absolute;
-      top: 100%;
-      right: 0;
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
+#Footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #717171;
+  font: 0.8em Cambria;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  text-align: center;
+}
 
-    .mobile-menu-dropdown-item {
-      margin: 5px;
-    }
+#Footer p {
+  margin: 0;
+}
 
-    .mobile-menu-dropdown-item a {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-      font-size: 0.9em;
-      padding: 5px;
-      border-radius: 5px;
-    }
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+}
 
-    /* Show/hide mobile menu dropdown */
-    .mobile-menu.show .mobile-menu-dropdown {
-      display: flex;
-    }
+.mobile-menu-icon {
+  font-size: 25px;
+  cursor: pointer;
+  margin-right: 10px;
+}
 
-    /* Media Queries */
-    @media only screen and (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
+.mobile-menu-dropdown {
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
-      .mobile-menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+.mobile-menu-dropdown-item {
+  margin: 5px;
+}
 
-      .mobile-menu-icon {
-        font-size: 18px;
-      }
+.mobile-menu-dropdown-item a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding: 5px;
+  border-radius: 5px;
+}
 
-      .mobile-menu-dropdown {
-        width: 100%;
-        font-size: 0.8em;
-      }
+/* Show/hide mobile menu dropdown */
+.mobile-menu.show .mobile-menu-dropdown {
+  display: flex;
+}
 
-      .container {
-        max-width: 80%;
-        padding: 10px;
-        margin-top: 120px;
-      }
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
 
-      #contact-me {
-        padding: 20px;
-      }
+  .mobile-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-      #contact-me h2 {
-        font-size: 1.8em;
-      }
+  .mobile-menu-icon {
+    font-size: 18px;
+  }
 
-      #contact-form input,
-      #contact-form textarea {
-        padding: 7px;
-      }
+  .mobile-menu-dropdown {
+    width: 100%;
+    font-size: 0.8em;
+  }
 
-      #contact-form button[type="submit"] {
-        padding: 10px 16px;
-      }
+  .container {
+    max-width: 80%;
+    padding: 10px;
+    margin-top: 120px;
+  }
+  
+  #contact-me {
+    padding: 20px;
+  }
+  
+  #contact-me h2 {
+    font-size: 1.8em;
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    padding: 7px;
+  }
+  
+  #contact-form button[type="submit"] {
+    padding: 10px 16px;
+  }
 
-      body {
-        background-image: url('4.jpg');
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-    }
+  body {
+    background-image: url('4.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
 
-    /* Media Query for 480px */
-    @media only screen and (max-width: 480px) {
-      .nav-container {
-        padding: 10px;
-      }
+/* Media Query for 480px */
+@media only screen and (max-width: 480px) {
+  .nav-container {
+    padding: 10px;
+  }
 
-      .nav-logo {
-        font-size: 20px;
-      }
+  .nav-logo {
+    font-size: 20px;
+  }
 
-      .nav-link-item {
-        margin-left: 10px;
-      }
+  .nav-link-item {
+    margin-left: 10px;
+  }
 
-      .nav-link-item a {
-        font-size: 14px;
-      }
+  .nav-link-item a {
+    font-size: 14px;
+  }
 
-      .nav-link-item a::after {
-        bottom: -1px;
-      }
+  .nav-link-item a::after {
+    bottom: -1px;
+  }
 
-      #Footer {
-        font-size: 0.7em;
-      }
+  #Footer {
+    font-size: 0.7em;
+  }
 
-      #contact-me h2 {
-        font-size: 1.6em;
-      }
+  #contact-me h2 {
+    font-size: 1.6em;
+  }
 
-      #contact-form label {
-        font-size: 14px;
-      }
+  #contact-form label {
+    font-size: 14px;
+  }
 
-      #contact-form input,
-      #contact-form textarea {
-        padding: 6px;
-        font-size: 14px;
-      }
+  #contact-form input,
+  #contact-form textarea {
+    padding: 6px;
+    font-size: 14px;
+  }
 
-      #contact-form button[type="submit"] {
-        padding: 10px 14px;
-      }
+  #contact-form button[type="submit"] {
+    padding: 10px 14px;
+  }
 
-      .mobile-menu-icon {
-        font-size: 16px;
-      }
+  .mobile-menu-icon {
+    font-size: 16px;
+  }
 
-      .mobile-menu-dropdown {
-        font-size: 0.8em;
-      }
+  .mobile-menu-dropdown {
+    font-size: 0.8em;
+  }
 
-      body {
-        background-image: url('4.jpg');
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-    }
+  body {
+    background-image: url('4.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
-    /* Animation for the Contact Me section */
-    #contact-me {
-      animation: fadeIn 1s ease-in-out;
-    }
+ /* Underline Style for Nav Links */
+  .nav-link-item a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    position: relative;
+  }
 
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
+  .nav-link-item a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: scaleX(0);
+  }
 
-    /* Add hover effect to the submit button */
-    #contact-form button[type="submit"]:hover {
-      background-color: rgba(0, 38, 255, 0.9);
-      transform: scale(1.05);
-    }
+  .nav-link-item a:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+ 
+/* Animation for the Contact Me section */
+#contact-me {
+  animation: fadeIn 1s ease-in-out;
+}
 
-    /* Add underline style to Nav Links */
-    .nav-link-item a {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-      position: relative;
-    }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-    .nav-link-item a::after {
-      content: "";
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: #000;
-      opacity: 0;
-      transition: opacity 0.3s, transform 0.3s;
-      transform: scaleX(0);
-    }
+/* Add hover effect to the submit button */
+#contact-form button[type="submit"]:hover {
+  background-color: rgba(0, 38, 255, 0.9);
+  transform: scale(1.05);
+}
 
-    .nav-link-item a:hover::after {
-      opacity: 1;
-      transform: scaleX(1);
-    }
+
+/* Animation for the Contact Me section */
+#contact-me {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Add hover effect to the submit button */
+#contact-form button[type="submit"]:hover {
+  background-color: rgba(0, 38, 255, 0.9);
+  transform: scale(1.05);
+}
+
+
+
+/* Add animation to the navigation bar */
+.nav-container {
+  animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+}
+
+/* Add animation to the header */
+#header {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-menu-dropdown {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  display: none;
+}
+
+.mobile-menu-dropdown.fadeIn {
+  display: flex;
+  animation-name: fadeIn;
+}
+
   </style>
 </head>
 
 <body>
-  <div id="main">
+<div id="main">
     <div class="nav-container">
       <a class="nav-logo" href="index.html">
-        <img src="logo.JPG" class="logo-image">
-      </a>
+  <img src="logo.JPG"class=" logo-image">
+</a>
       <ul class="nav-links">
         <li class="nav-link-item"><a href="index.html">Home</a></li>
         <li class="nav-link-item"><a href="search.html">Search</a></li>
@@ -447,7 +522,7 @@
         <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
       </ul>
       <div class="mobile-menu">
-        <div class="mobile-menu-icon" id="mobile-menu-icon">&#9776; <span>Menu</span></div>
+        <div class="mobile-menu-icon" id="mobile-menu-icon">&#9776;   <span>Menu</span></div>
         <div class="mobile-menu-dropdown">
           <div class="mobile-menu-dropdown-item"><a href="index.html">Home</a></div>
           <div class="mobile-menu-dropdown-item"><a href="search.html">Search</a></div>
@@ -456,8 +531,8 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div id="contact-me">
+<div class="container">
+  <div id="contact-me">
         <h2>Contact Me</h2>
         <form id="contact-form" action="mailto:support@airportcontacts.com" method="POST" enctype="text/plain">
           <div class="form-group">
@@ -477,23 +552,45 @@
 
           <button type="submit">Submit</button>
         </form>
-      </div>
-    </div>
+  </div>
+</div>
     <div id="Footer">
-      <p>TerminalOperations | Contact: support@airportcontacts.com | © 2023 Ali Ashham. All rights reserved.</p>
+   <p>Contact: support@airportcontacts.com | Terminal Operations © 2023 Ali Ashham.<p>
     </div>
   </div>
+ <script>
+    // JavaScript code to toggle visibility of mobile menu dropdown
+    document.addEventListener('DOMContentLoaded', function() {
+      var mobileMenuIcon = document.getElementById('mobile-menu-icon');
+      var mobileMenuDropdown = document.querySelector('.mobile-menu-dropdown');
 
-  <script>
-    // Mobile Menu Toggle
-    const mobileMenuIcon = document.getElementById("mobile-menu-icon");
-    const mobileMenuDropdown = document.querySelector(".mobile-menu-dropdown");
+      mobileMenuIcon.addEventListener('click', function() {
+        mobileMenuIcon.parentElement.classList.toggle('show');
+      });
 
-    mobileMenuIcon.addEventListener("click", () => {
-      mobileMenuIcon.classList.toggle("show");
-      mobileMenuDropdown.classList.toggle("show");
+
+      document.addEventListener('click', function(event) {
+        var targetElement = event.target;
+        if (!targetElement.matches('.mobile-menu-icon')) {
+          mobileMenuIcon.parentElement.classList.remove('show');
+        }
+      });
+    // Adjust contact form position on mobile keyboard open/close
+    window.addEventListener('resize', function() {
+      var contactForm = document.getElementById('contact-me');
+      var windowHeight = window.innerHeight;
+
+      contactForm.style.transform = 'translateY(0)';
+
+      if (window.innerHeight < windowHeight) {
+        var formOffsetTop = contactForm.getBoundingClientRect().top;
+
+        if (formOffsetTop < 0) {
+          contactForm.style.transform = 'translateY(' + formOffsetTop + 'px)';
+        }
+      }
+    });
     });
   </script>
 </body>
-
 </html>
