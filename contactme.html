@@ -404,9 +404,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
   }
-    #contact-form.keyboard-open {
-        transform: translateY(-100px); /* Adjust the translation as needed */
-      }
+   
     }
  /* Underline Style for Nav Links */
   .nav-link-item a {
@@ -600,21 +598,22 @@ body {
           mobileMenuIcon.parentElement.classList.remove('show');
         }
       });
-    document.addEventListener('DOMContentLoaded', function() {
-      var contactForm = document.getElementById('contact-me');
-
       // Adjust contact form position on mobile keyboard open/close
       window.addEventListener('resize', function() {
+        var contactForm = document.getElementById('contact-me');
         var windowHeight = window.innerHeight;
-        var formOffsetTop = contactForm.getBoundingClientRect().top;
 
-        if (window.innerHeight < windowHeight && formOffsetTop < 0) {
-          contactForm.classList.add('keyboard-open');
-        } else {
-          contactForm.classList.remove('keyboard-open');
+        contactForm.style.transform = 'translateY(0)';
+
+        if (window.innerHeight < windowHeight) {
+          var formOffsetTop = contactForm.getBoundingClientRect().top;
+
+          if (formOffsetTop < 0) {
+            contactForm.style.transform = 'translateY(' + formOffsetTop + 'px)';
+          }
         }
       });
-    })
+    });
   </script>
 </body>
 
