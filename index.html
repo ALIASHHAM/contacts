@@ -271,21 +271,24 @@ margin-left: 10px;
 
 
     /* Footer */
-    #footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      color: #717171;
-      font: 0.8em Cambria;
-      background: rgba(255, 255, 255, 0.7);
-      padding: 10px;
-      text-align: center;
-    }
+#Footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #717171;
+  font: 0.8em Cambria;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box; /* Add this line */
+  font-family: 'Roboto', sans-serif; /* Updated font */
+}
 
-    #footer p {
-      margin: 0;
-    }
+#Footer p {
+  margin: 0;
+  font-size: 0.8em; /* Adjust the font size as needed */
+}
 
     /* Animation for Page Load */
     @keyframes fadeSlideIn {
@@ -311,29 +314,34 @@ margin-left: 10px;
     /* Media Queries */
     @media only screen and (max-width: 768px) {
    #header {
-    font-size: 1.3em;
-    margin-top: -20px;
-margin-left: 5px;
-    }
-
-      #about-section {
-        width: 75%;
-        font-size: 0.7em;
-        margin-top: 25%;
-      }
-
-      #about-section a {
-        padding: 15px 36px;
-      }
-    }
-
-    @media only screen and (max-width: 480px) {
-  #header {
     font-size: 1.1em;
     margin-top: -20px;
 margin-left: 5px;
     }
 
+      #about-section {
+        width: 75%;
+        font-size: 0.7em;
+        margin-top: 25%;
+      }
+
+      #about-section a {
+        padding: 15px 36px;
+      }
+     #Footer {
+    position: static;
+    margin-top: 20px; /* Add some margin to separate it from the content */
+    font-size: 0.7em; /* Adjust the font size as needed */
+  }
+}
+
+    @media only screen and (max-width: 480px) {
+  #header {
+    font-size: 1.0em;
+    margin-top: -20px;
+margin-left: 5px;
+    }
+
 
       #about-section {
         width: 75%;
@@ -344,11 +352,16 @@ margin-left: 5px;
       #about-section a {
         padding: 15px 36px;
       }
-    }
+    #Footer {
+    position: static;
+    margin-top: 20px; /* Add some margin to separate it from the content */
+    font-size: 0.7em; /* Adjust the font size as needed */
+  }
+}
 
     @media only screen and (max-width: 360px) {
     #header {
-      font-size: 0.9em;
+      font-size: 0.8em;
      margin-top: -20px;
 margin-left: 5px;
     }
@@ -364,7 +377,12 @@ margin-left: 5px;
       #about-section a {
         padding: 15px 30px;
       }
-    }
+    #Footer {
+    position: static;
+    margin-top: 20px; /* Add some margin to separate it from the content */
+    font-size: 0.7em; /* Adjust the font size as needed */
+  }
+}
 
   </style>
 </head>
