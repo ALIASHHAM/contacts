@@ -20,6 +20,17 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
 }
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed; /* Add this line */
+}
 
 /* Navigation Bar */
 .nav-container {
@@ -117,8 +128,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   margin-top: 90px;
-flex-wrap: wrap;
-
+  flex-wrap: wrap;
 }
 
 #contact-me {
@@ -211,6 +221,7 @@ flex-wrap: wrap;
 #contact-form button[type="submit"]:focus {
   outline: none;
 }
+
 
 #Footer {
   position: fixed;
@@ -350,6 +361,12 @@ flex-wrap: wrap;
     font-size: 0.7em;
   }
 
+
+  .container {
+    max-width: 80%;
+    padding: 10px;
+    margin-top: 120px;
+  }
   #contact-me h2 {
     font-size: 1.6em;
   }
@@ -510,11 +527,11 @@ flex-wrap: wrap;
 </head>
 
 <body>
-<div id="main">
+  <div id="main">
     <div class="nav-container">
       <a class="nav-logo" href="index.html">
-  <img src="logo.JPG"class=" logo-image">
-</a>
+        <img src="logo.JPG" class=" logo-image">
+      </a>
       <ul class="nav-links">
         <li class="nav-link-item"><a href="index.html">Home</a></li>
         <li class="nav-link-item"><a href="search.html">Search</a></li>
@@ -522,7 +539,7 @@ flex-wrap: wrap;
         <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
       </ul>
       <div class="mobile-menu">
-        <div class="mobile-menu-icon" id="mobile-menu-icon">&#9776;   <span>Menu</span></div>
+        <div class="mobile-menu-icon" id="mobile-menu-icon">&#9776; <span>Menu</span></div>
         <div class="mobile-menu-dropdown">
           <div class="mobile-menu-dropdown-item"><a href="index.html">Home</a></div>
           <div class="mobile-menu-dropdown-item"><a href="search.html">Search</a></div>
@@ -531,8 +548,8 @@ flex-wrap: wrap;
         </div>
       </div>
     </div>
-<div class="container">
-  <div id="contact-me">
+    <div class="container">
+      <div id="contact-me">
         <h2>Contact Me</h2>
         <form id="contact-form" action="mailto:support@airportcontacts.com" method="POST" enctype="text/plain">
           <div class="form-group">
@@ -552,13 +569,13 @@ flex-wrap: wrap;
 
           <button type="submit">Submit</button>
         </form>
-  </div>
-</div>
+      </div>
+    </div>
     <div id="Footer">
-   <p>Contact: support@airportcontacts.com | Terminal Operations © 2023 Ali Ashham.<p>
+      <p>Contact: support@airportcontacts.com | Terminal Operations © 2023 Ali Ashham.<p>
     </div>
   </div>
- <script>
+  <script>
     // JavaScript code to toggle visibility of mobile menu dropdown
     document.addEventListener('DOMContentLoaded', function() {
       var mobileMenuIcon = document.getElementById('mobile-menu-icon');
@@ -575,22 +592,23 @@ flex-wrap: wrap;
           mobileMenuIcon.parentElement.classList.remove('show');
         }
       });
-    // Adjust contact form position on mobile keyboard open/close
-    window.addEventListener('resize', function() {
-      var contactForm = document.getElementById('contact-me');
-      var windowHeight = window.innerHeight;
+      // Adjust contact form position on mobile keyboard open/close
+      window.addEventListener('resize', function() {
+        var contactForm = document.getElementById('contact-me');
+        var windowHeight = window.innerHeight;
 
-      contactForm.style.transform = 'translateY(0)';
+        contactForm.style.transform = 'translateY(0)';
 
-      if (window.innerHeight < windowHeight) {
-        var formOffsetTop = contactForm.getBoundingClientRect().top;
+        if (window.innerHeight < windowHeight) {
+          var formOffsetTop = contactForm.getBoundingClientRect().top;
 
-        if (formOffsetTop < 0) {
-          contactForm.style.transform = 'translateY(' + formOffsetTop + 'px)';
+          if (formOffsetTop < 0) {
+            contactForm.style.transform = 'translateY(' + formOffsetTop + 'px)';
+          }
         }
-      }
-    });
+      });
     });
   </script>
 </body>
+
 </html>
