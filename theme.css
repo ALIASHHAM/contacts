@@ -158,6 +158,7 @@ td {
   word-wrap: break-word;
   hyphens: auto;
   max-width: 100%;
+  font-family: Cambria;
 }
 
 tr:nth-child(even) {
