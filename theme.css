@@ -38,25 +38,27 @@ body {
 
 #header {
   position: relative;
-  font-size: 2.5em;
-  font-weight: bold;
+  font-size: 2.2em;
   margin: 20px auto;
   padding: 20px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s;
   cursor: pointer;
-  color: black;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-
+  color: white;
+  mix-blend-mode: overlay;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  margin-top: 150px;
+  max-width: 600px;
+  font-family: 'Poppins', sans-serif; /* Alternate font */
 }
 
 #header:hover {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(0, 0, 0, 0.4);
 }
-
 
 #header::before {
   content: "";
@@ -66,15 +68,14 @@ body {
   right: -10px;
   bottom: -10px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
   pointer-events: none;
   z-index: -1;
-  opacity: 0;
   transition: opacity 0.3s;
 }
 
 #header:hover::before {
-  opacity: 0.6;
+  opacity: 0.2;
 }
 
 
