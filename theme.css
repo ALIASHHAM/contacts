@@ -51,7 +51,6 @@ body {
   color: white;
   mix-blend-mode: overlay;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  margin-top: 150px;
   max-width: 600px;
   font-family: 'Poppins', sans-serif; /* Alternate font */
 }
