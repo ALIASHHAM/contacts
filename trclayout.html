@@ -1,13 +1,21 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
 <title>TRC</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-<meta property="og:image" content="via.jpg">
-    <meta property="og:image:alt" content="Terminal Operations">
-<meta property="og:url" content="https://www.airportcontacts.com">
-<link rel="shortcut icon" href="favicon.ico" />
-<link rel="stylesheet" href="'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes, maximum-scale=1, user-scalable=yes">
+
+	<meta property="og:image" content="via.jpg">
+
+        <meta property="og:image:alt" content="Terminal Operations">
+
+	<meta property="og:url" content="https://www.airportcontacts.com">
+
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
 
 <style>
 
@@ -20,11 +28,13 @@
       background-repeat: no-repeat;
       background-position: top center;
     }
+
     #main {
-  max-width: 1500px; /* Adjust the value to make the container smaller */
-  margin: 0 auto;
-  padding: 20px;
+ 	 max-width: 1500px; /* Adjust the value to make the container smaller */
+ 	 margin: 0 auto;
+ 	 padding: 20px;
 }
+
 #header {
   position: relative;
   font-size: 2em;
@@ -68,7 +78,6 @@
   opacity: 0.2;
 }
 
-    
 input[type="text"] {
   padding: 20px;
   font-size: 20px;
@@ -81,9 +90,10 @@ input[type="text"] {
   background-color: #f2f2f2;
   box-sizing: border-box;
   transition: border-color 0.3s, box-shadow 0.3s;
-margin-top: 50px;
+  margin-top: 50px;
   color: #333;
-  max-width: 600px; /* Adjust the value to make the container smaller */
+  max-width: 600px;
+
 }
 
 input[type="text"]::placeholder {
@@ -284,6 +294,7 @@ background: transparent;
   pointer-events: none;
   z-index: -1;
 }
+
 .nav-logo {
   display: flex;
   align-items: center;
@@ -393,6 +404,7 @@ margin-top: 20px;
     }
 
 }
+
 @media only screen and (max-width: 480px) {
   body {
     background-size: auto;
@@ -464,6 +476,7 @@ margin-top: 20px;
     font-size: 1.2em;
   }
 }
+
 @media (max-width: 360px) {
   .seat {
     width: 40%;
@@ -486,6 +499,7 @@ margin-top: 20px;
     margin-top: 5px;
   }
 }
+
 /* Add animation to the navigation bar */
 .nav-container {
   animation: slideDown 1s ease-in-out;
@@ -583,15 +597,22 @@ margin-top: 20px;
 }
 
 </style>
+
 <script src="seating.js"></script>
+
 </head>
 
 <body>
+
 <div id="main">
+
   <header class="header">
+
     <div class="nav-container">
+
       <a class="nav-logo" href="index.html">
   <img src="logo.JPG"class=" logo-image">
+
 </a>
       <ul class="nav-links">
         <li class="nav-link-item"><a href="index.html">Home</a></li>
@@ -599,24 +620,33 @@ margin-top: 20px;
         <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
         <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
       </ul>
-      <div class="mobile-menu">
-        <div class="mobile-menu-icon" id="mobile-menu-icon">&#9776;   <span>Menu</span></div>
-        <div class="mobile-menu-dropdown">
-          <div class="mobile-menu-dropdown-item"><a href="index.html">Home</a></div>
-          <div class="mobile-menu-dropdown-item"><a href="search.html">Search</a></div>
-          <div class="mobile-menu-dropdown-item"><a href="trclayout.html">TRC Layout</a></div>
-          <div class="mobile-menu-dropdown-item"><a href="contactme.html">Contact</a></div>
+
+            <div class="mobile-menu">
+                <div class="mobile-menu-icon" id="mobile-menu-icon">
+                    <span class="menu-icon">&#9776;</span>
+                    <span class="menu-name">Menu</span>
+                </div>
+                <div class="mobile-menu-dropdown">
+                    <div class="mobile-menu-dropdown-item"><a href="index.html">Home</a></div>
+                    <div class="mobile-menu-dropdown-item"><a href="search.html">Search</a></div>
+                    <div class="mobile-menu-dropdown-item"><a href="trclayout.html">TRC Layout</a></div>
+                    <div class="mobile-menu-dropdown-item"><a href="contactme.html">Contact</a></div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+
     <h1 id="header">Tourist Representative Counters</h1>
+
     <input type="text" id="search-bar" placeholder="Search by Resort Name..." class="search-bar">
+
   </header>
 
   <div id="seating-plan" class="seating-plan"></div>
+
   <div class="pdf-container">
     <embed src="trc.pdf" class="pdf-embed" type="application/pdf" />
   </div>
+
   <div id="Footer">
        <p>Contact: support@airportcontacts.com<p>
 <p>Terminal Operations © 2023 Ali Ashham.<p>
@@ -624,23 +654,25 @@ margin-top: 20px;
 </div>
 
 <script>
-  // JavaScript code to toggle visibility of mobile menu dropdown
-  document.addEventListener('DOMContentLoaded', function() {
-    var mobileMenuIcon = document.getElementById('mobile-menu-icon');
-    var mobileMenuDropdown = document.querySelector('.mobile-menu-dropdown');
+            // JavaScript code to toggle visibility of mobile menu dropdown
+            document.addEventListener('DOMContentLoaded', function() {
+                var mobileMenuIcon = document.getElementById('mobile-menu-icon');
+                var mobileMenuDropdown = document.querySelector('.mobile-menu-dropdown');
 
-    mobileMenuIcon.addEventListener('click', function() {
-      mobileMenuIcon.parentElement.classList.toggle('show');
-    });
+                mobileMenuIcon.addEventListener('click', function() {
+                    mobileMenuIcon.parentElement.classList.toggle('show');
+                });
 
-    document.addEventListener('click', function(event) {
-      var targetElement = event.target;
-      if (!targetElement.matches('.mobile-menu-icon')) {
-        mobileMenuIcon.parentElement.classList.remove('show');
-      }
-    });
-  });
+                document.addEventListener('click', function(event) {
+                    var targetElement = event.target;
+                    if (!targetElement.matches('.mobile-menu-icon') && !targetElement.matches('.menu-name')) {
+                        mobileMenuIcon.parentElement.classList.remove('show');
+                    }
+                });
+            });
+
 </script>
+
 </body>
 
 </html>
