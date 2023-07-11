@@ -2,14 +2,16 @@
 <html>
 
 <head>
-  <title>Contact Me</title>
+  	<title>Contact Me</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes, maximum-scale=1, user-scalable=yes">
   <meta property="og:image" content="via.jpg">
-  <meta property="og:image:alt" content="Terminal Operations">
+
   <meta property="og:url" content="https://www.airportcontacts.com">
+
   <link rel="shortcut icon" href="favicon.ico" />
 
   <style>
+
 body {
   margin: 0;
   padding: 0;
@@ -20,6 +22,7 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
 }
+
 #main {
   display: flex;
   flex-direction: column;
@@ -324,7 +327,7 @@ box-sizing: border-box;
   
   #contact-me {
     padding: 20px;
-  margin-bottom: 120px; /* Add margin to create space for the contact form to shift */
+  margin-bottom: 120px;
       }
  
   
@@ -348,7 +351,7 @@ box-sizing: border-box;
     background-position: center;
   }
     #contact-form.keyboard-open {
-        transform: translateY(-100px); /* Adjust the translation as needed */
+        transform: translateY(-100px);
       }
     }
 
@@ -418,7 +421,7 @@ box-sizing: border-box;
   }
    
     #contact-form.keyboard-open {
-        transform: translateY(-100px); /* Adjust the translation as needed */
+        transform: translateY(-100px); 
       }
     }
 
@@ -539,33 +542,44 @@ box-sizing: border-box;
 }
 
   </style>
+
 </head>
 
 <body>
+
   <div id="main">
+
     <div class="nav-container">
+
       <a class="nav-logo" href="index.html">
+
         <img src="logo.JPG" class=" logo-image">
       </a>
+
       <ul class="nav-links">
         <li class="nav-link-item"><a href="index.html">Home</a></li>
         <li class="nav-link-item"><a href="search.html">Search</a></li>
         <li class="nav-link-item"><a href="trclayout.html">TRC Layout</a></li>
         <li class="nav-link-item"><a href="contactme.html">Contact</a></li>
       </ul>
-      <div class="mobile-menu">
-        <div class="mobile-menu-icon" id="mobile-menu-icon">&#9776; <span>Menu</span></div>
-        <div class="mobile-menu-dropdown">
-          <div class="mobile-menu-dropdown-item"><a href="index.html">Home</a></div>
-          <div class="mobile-menu-dropdown-item"><a href="search.html">Search</a></div>
-          <div class="mobile-menu-dropdown-item"><a href="trclayout.html">TRC Layout</a></div>
-          <div class="mobile-menu-dropdown-item"><a href="contactme.html">Contact</a></div>
+            <div class="mobile-menu">
+                <div class="mobile-menu-icon" id="mobile-menu-icon">
+                    <span class="menu-icon">&#9776;</span>
+                    <span class="menu-name">Menu</span>
+                </div>
+                <div class="mobile-menu-dropdown">
+                    <div class="mobile-menu-dropdown-item"><a href="index.html">Home</a></div>
+                    <div class="mobile-menu-dropdown-item"><a href="search.html">Search</a></div>
+                    <div class="mobile-menu-dropdown-item"><a href="trclayout.html">TRC Layout</a></div>
+                    <div class="mobile-menu-dropdown-item"><a href="contactme.html">Contact</a></div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+
     <div class="container">
       <div id="contact-me">
         <h2>Contact Me</h2>
+
         <form id="contact-form" action="mailto:support@airportcontacts.com" method="POST" enctype="text/plain">
           <div class="form-group">
             <label for="name">Name</label>
@@ -586,28 +600,29 @@ box-sizing: border-box;
         </form>
       </div>
     </div>
+
     <div id="Footer">
         <p>Contact: support@airportcontacts.com<p>
 <p>Terminal Operations © 2023 Ali Ashham.<p>
     </div>
   </div>
+
   <script>
-    // JavaScript code to toggle visibility of mobile menu dropdown
-    document.addEventListener('DOMContentLoaded', function() {
-      var mobileMenuIcon = document.getElementById('mobile-menu-icon');
-      var mobileMenuDropdown = document.querySelector('.mobile-menu-dropdown');
+            // JavaScript code to toggle visibility of mobile menu dropdown
+            document.addEventListener('DOMContentLoaded', function() {
+                var mobileMenuIcon = document.getElementById('mobile-menu-icon');
+                var mobileMenuDropdown = document.querySelector('.mobile-menu-dropdown');
 
-      mobileMenuIcon.addEventListener('click', function() {
-        mobileMenuIcon.parentElement.classList.toggle('show');
-      });
+                mobileMenuIcon.addEventListener('click', function() {
+                    mobileMenuIcon.parentElement.classList.toggle('show');
+                });
 
-
-      document.addEventListener('click', function(event) {
-        var targetElement = event.target;
-        if (!targetElement.matches('.mobile-menu-icon')) {
-          mobileMenuIcon.parentElement.classList.remove('show');
-        }
-      });
+                document.addEventListener('click', function(event) {
+                    var targetElement = event.target;
+                    if (!targetElement.matches('.mobile-menu-icon') && !targetElement.matches('.menu-name')) {
+                        mobileMenuIcon.parentElement.classList.remove('show');
+                    }
+                });
       // Adjust contact form position on mobile keyboard open/close
       window.addEventListener('resize', function() {
         var contactForm = document.getElementById('contact-me');
@@ -624,7 +639,9 @@ box-sizing: border-box;
         }
       });
     });
+
   </script>
+
 </body>
 
 </html>
