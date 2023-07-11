@@ -2,24 +2,25 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> - Airport Contact Numbers - </title>
-  <meta property="og:image" content="via.jpg">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes, maximum-scale=1, user-scalable=yes">
+  	 <title> - Airport Contact Numbers - </title>
+   <meta property="og:image" content="via.jpg">
 
-  <meta property="og:image:url" content="https://www.airportcontacts.com/">
+   <meta property="og:image:url" content="https://www.airportcontacts.com/">
   
-  <link rel="shortcut icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> <!-- Added Google Fonts link -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Francois+One&display=swap">
+  	<link rel="shortcut icon" href="favicon.ico">
+ 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> <!-- Added Google Fonts link -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Francois+One&display=swap">
 
 
   <style>
+    
     body {
       margin: 0;
       padding: 0;
       background-color: #50e0ff;
-      overflow: hidden; /* Prevent background image from overflowing */
+      overflow: hidden;
       background-image: url("Male.jpg");
       background-size: cover;
       background-repeat: no-repeat;
@@ -28,12 +29,12 @@
 
 
     #header {
-      font-family: 'Lobster', cursive; /* Applied the 'Pacifico' font to the header */
+      font-family: 'Lobster', cursive;
       font-size: 2.5em;
-      margin-top: -80px; /* Initial position above the viewport */
-margin-left: 10px;
+      margin-top: -80px;
+      margin-left: 10px;
       color: #333;
-      animation: slideDown 1s forwards; /* Slide down animation */
+      animation: slideDown 1s forwards;
 
     }
 
@@ -42,7 +43,7 @@ margin-left: 10px;
         margin-top: -100px;
       }
       100% {
-        margin-top: 20px; /* Final position */
+        margin-top: 20px;
       }
     }
 
@@ -54,10 +55,10 @@ margin-left: 10px;
       width: 100%;
       height: 100%;
       z-index: -1;
-      background-image: url("1.jpg"); /* Set initial background image */
+      background-image: url("1.jpg"); 
       background-size: cover;
-      transition: background-image 10s linear; /* Adjust the transition duration as needed */
-      animation: fadeIn 2s forwards; /* Fade-in animation */
+      transition: background-image 10s linear;
+      animation: fadeIn 2s forwards;
     }
 
     @keyframes fadeIn {
@@ -89,7 +90,7 @@ margin-left: 10px;
 
     /* Start the animation */
     #slideshow-container {
-      animation: slideBackground 40s infinite; /* Adjust the animation duration as needed */
+      animation: slideBackground 40s infinite;
     }
 
     /* About Section */
@@ -98,13 +99,13 @@ margin-left: 10px;
       justify-content: center;
       align-items: center;
       height: 65vh;
-      opacity: 0; /* Initially hidden */
-      animation: fadeIn 1s forwards; /* Fade-in animation */
-      animation-delay: 1s; /* Delay animation for 1 second */
+      opacity: 0; 
+      animation: fadeIn 1s forwards; 
+      animation-delay: 1s; 
     }
 
     #about-section {
-      background-color: rgba(255, 255, 255, 0.4); /* Adjust the opacity to make it more transparent */
+      background-color: rgba(255, 255, 255, 0.4);
       padding: 20px;
       text-align: center;
       border-radius: 10px;
@@ -115,9 +116,9 @@ margin-left: 10px;
       position:relative;
       backdrop-filter: blur(10px);
       overflow: hidden;
-      opacity: 0.9; /* Adjust the opacity as needed */
-      transform: translateY(-50px); /* Initial position above the viewport */
-      animation: slideIn 1s forwards; /* Slide in animation */
+      opacity: 0.9; 
+      transform: translateY(-50px); 
+      animation: slideIn 1s forwards;
     }
 
     @keyframes slideIn {
@@ -133,7 +134,7 @@ margin-left: 10px;
 
     #about-section::before {
       content: "";
-      background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%); /* Adjust the opacity ofthe linear gradient */
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%); 
       position: absolute;
       top: 0;
       left: 0;
@@ -142,18 +143,18 @@ margin-left: 10px;
       z-index: -1;
       pointer-events: none;
       border-radius: 10px;
-      opacity: 0.9; /* Adjust the opacity as needed */
+      opacity: 0.9; 
     }
 
-#about-section h2 {
-  font-size: 1.8em;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  color: #333;
-  font-weight: bold;
-  font-family: 'Lobster', cursive;
+	#about-section h2 {
+  	font-size: 1.8em;
+  	margin-top: 10px;
+  	margin-bottom: 20px;
+  	color: #333;
+  	font-weight: bold;
+  	font-family: 'Lobster', cursive;
  
-}
+	}
 
 
     #about-section p {
@@ -172,24 +173,25 @@ margin-left: 10px;
       font-family: "Arial", sans-serif;
     }
 
+
 /* Search Button */
 #about-section a {
   display: inline-block;
-  padding: 18px 45px; /* Adjust the padding to increase the button size */
-  background: #212121; /* Updated background color */
-  color: #00bfff; /* Updated font color to sky blue */
+  padding: 18px 45px; 
+  background: #212121; 
+  color: #00bfff; 
   text-decoration: none;
-  border-radius: 20px; /* Updated border radius */
+  border-radius: 20px; 
   transition: 0.1s;
   position: relative;
   overflow: hidden;
   font-weight: bold;
   font-size: 18px;
-  font-family: 'Montserrat', sans-serif; /* Updated font family */
+  font-family: 'Montserrat', sans-serif;
   margin: 20px auto;
   cursor: pointer;
   border: 1px solid #303030;
-  box-shadow: 0 0 15px rgba(0, 191, 255, 0.8); /* Updated glowing effect */
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.8); 
 }
 
 #about-section a::before {
@@ -199,7 +201,7 @@ margin-left: 10px;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: rgba(0, 191, 255, 0.2); /* Updated glowing effect color */
+  background: rgba(0, 191, 255, 0.2);
   opacity: 0;
   transition: opacity 0.3s ease-in-out, left 0.7s ease-in-out;
   border-radius: 20px;
@@ -306,16 +308,16 @@ margin-left: 10px;
     }
 
     #about-section {
-      animation: fadeSlideIn 1s ease-in-out 0.5s 0.5s forwards; /* Delay the animation and keep the final state */
+      animation: fadeSlideIn 1s ease-in-out 0.5s 0.5s forwards; 
     }
 
     /* Media Queries */
     @media only screen and (max-width: 768px) {
-   #header {
-    font-size: 1.1em;
-    margin-top: -20px;
-margin-left: 5px;
-    }
+   	#header {
+     	 font-size: 1.1em;
+     	 margin-top: -20px;
+    	 margin-left: 5px;
+      }
 
       #about-section {
         width: 75%;
@@ -326,14 +328,14 @@ margin-left: 5px;
       #about-section a {
         padding: 15px 36px;
       }
-}
+   }
+
     @media only screen and (max-width: 480px) {
-  #header {
-    font-size: 1.0em;
-    margin-top: -20px;
-margin-left: 5px;
-    }
-
+  	#header {
+    	     font-size: 1.0em;
+    	     margin-top: -20px;
+	     margin-left: 5px;
+      }
 
       #about-section {
         width: 75%;
@@ -345,13 +347,13 @@ margin-left: 5px;
         padding: 15px 36px;
       }
 
-}
+  }
 
     @media only screen and (max-width: 360px) {
-    #header {
-      font-size: 0.8em;
-     margin-top: -20px;
-margin-left: 5px;
+    	#header {
+      	  font-size: 0.8em;
+          margin-top: -20px;
+	  margin-left: 5px;
     }
 
       #about-section {
@@ -359,39 +361,55 @@ margin-left: 5px;
         font-size: 0.7em;
         margin-top: 25%px;
       }
+
   body {
-    background-position: center center;
+     background-position: center center;
 
       #about-section a {
         padding: 15px 30px;
       }
 }
+
+
   </style>
+
 </head>
 
 <body>
   <div id="header">
     <h1>Terminal Operations</h1>
   </div>
+
   <div id="slideshow-container"></div>
+
   <div id="main">
+
     <div id="about-section">
+
       <h2>Welcome!</h2>
+
       <p>This webpage contains important contact information for numerous entities involved in terminal operations. It includes contact information for TS staffs, Internal numbers, Airline, Resorts, Representatives, and Guesthouses.</p>
-      <p>Furthermore, this webpage also includes the layout and counter numbers for the resorts located in the TRC (Tourist Representative Counter Area). The aim is to facilitate efficient communication and coordination within the terminal operations environment, assuring smooth interactions and assistance for visitors, guests, and staff members alike.</p>
-      <p>Thank you!</p>
+     
+	 <p>Furthermore, this webpage also includes the layout and counter numbers for the resorts located in the TRC (Tourist Representative Counter Area). The aim is to facilitate efficient communication and coordination within the terminal operations environment, assuring smooth interactions and assistance for visitors, guests, and staff members alike.</p>
+     
+	 	<p>Thank you!</p>
 
      <a href="search.html" class="glow-button">Go To Search</a>
+
     </div>
 
     <div id="footer">
+
        <p>Contact: support@airportcontacts.com<p>
-<p>Terminal Operations © 2023 Ali Ashham.<p>
+
+		<p>Terminal Operations © 2023 Ali Ashham.<p>
     
     </div>
+
   </div>
 
   <script>
+
     // JavaScript for fading in the About section on page load
     window.addEventListener("DOMContentLoaded", function () {
       const aboutSection = document.getElementById("about-section");
@@ -407,7 +425,9 @@ margin-left: 5px;
             button.style.setProperty('--x', x + 'px');
             button.style.setProperty('--y', y + 'px');
         });
+
   </script>
+
 </body>
 
 </html>
