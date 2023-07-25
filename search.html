@@ -47,6 +47,8 @@
         </div>
 
         <div id="banner">
+		<img src="new.jpg" alt="Banner Image 1">
+		  <img src="99.jpg" alt="Banner Image 2">
             <h1 id="header">Airport Contact Numbers</h1>
             <div id="search">
                 <input type="text" name="gets" onKeyUp="getResult()" id="text" placeholder="Search by Name...">
@@ -97,6 +99,20 @@
                         mobileMenuIcon.parentElement.classList.remove('show');
                     }
                 });
+		    // JavaScript code to switch between banner images at regular intervals
+		document.addEventListener('DOMContentLoaded', function() {
+  		var bannerImages = document.querySelectorAll('#banner img');
+ 		 var currentImageIndex = 0;
+		  var interval = 5000; // Interval in milliseconds (5 seconds in this example)
+
+ 		 function rotateImages() {
+ 		   bannerImages[currentImageIndex].style.opacity = '0';
+  		  currentImageIndex = (currentImageIndex + 1) % bannerImages.length;
+   		 bannerImages[currentImageIndex].style.opacity = '1';
+ 		 }
+
+ 		 setInterval(rotateImages, interval);
+		});
             });
 </script>
   
