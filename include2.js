@@ -1642,7 +1642,7 @@ code[330]= "6644487 / 3343840";
 code[331]= "9982400";
 code[332]= "6587070";
 code[333]= "6642903 / 3323369";
-code[334]= "7980515 / 9773027 / 7773027";
+code[334]= "7980515 / 7773027";
 code[335]= "6740025 / 3316131";
 code[336]= "7776137";
 code[337]= "6608800";
@@ -3963,3 +3963,4 @@ function resetSearch() {
   document.getElementById("text").value = "";
   getResult(); // Call the search function to update the results after resetting
 }
+
