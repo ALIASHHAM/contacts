@@ -1419,7 +1419,7 @@ code[107]= "9147970";
 code[108]= "7786987";
 code[109]= "7787031 / 7656979";
 code[110]= "7903811";
-code[111]= "7958844 / 9483838";
+code[111]= "7958844";
 code[112]= "7829090 / 7549977";
 code[113]= "7947664 / 7927664";
 code[114]= "7978833";
@@ -3963,5 +3963,6 @@ function resetSearch() {
   document.getElementById("text").value = "";
   getResult(); // Call the search function to update the results after resetting
 }
+
 
 
